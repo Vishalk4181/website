@@ -1,0 +1,69 @@
+.news-events {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #e3f2fd, #f3e5ab); /* Light blue to light yellow gradient */
+    color: #333;
+    font-family: 'Lora', serif;
+  }
+  
+  .news-events-heading {
+    text-align: center;
+  font-size: 3.2rem; /* Larger font size for more impact */
+  margin-bottom: 60px;
+  color: #f57f17; /* Light saffron color */
+  font-weight: 900;
+  position: relative;
+  animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out; /* Bounce-in animation */
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5); /* Enhanced text shadow */
+  letter-spacing: 2px; /* Increased letter spacing */
+  }
+
+  .news-events-heading::after {
+    content: '';
+    display: block;
+    width: 400px; /* Wider underline for emphasis */
+    height: 8px;
+    background: linear-gradient(45deg, #fe851c, #6fbeff); /* Initial gradient */
+    margin: 20px auto 0;
+    border-radius: 5px;
+    background-size: 200% 200%; /* Larger background to enable smooth animation */
+    animation: gradientMove 4s linear infinite; /* Continuous, smooth animation */
+  }
+
+  
+  .news-events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .news-event {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .news-event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .news-event-title {
+    font-size: 1.5rem;
+    color: #f57f17;
+    margin-bottom: 10px;
+  }
+  
+  .news-event-date {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .news-event-content {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  

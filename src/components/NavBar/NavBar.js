@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../NavBar/NavBar.css';
 import logo from '../../assets/images/logo.png';
 
@@ -6,21 +7,23 @@ const NavBar = () => {
     return (
         <header className="navbar">
             <div className="logo-container">
-                <img src={logo} alt="Shri Madhav Jan Seva Nyas" className="logo" />
+                <Link to="/">
+                    <img src={logo} alt="Shri Madhav Jan Sewa Nyas" className="logo" />
+                </Link>
                 <div className="text-container">
-                    <h1>Shri Madhav Jan Seva Nyas</h1>
+                    <h1>Shri Madhav Jan Sewa Nyas</h1>
                     <p>Center Of Education, Skills & Career Advancement (CESCA)</p>
                 </div>
             </div>
             <nav>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/programs">Programs</a></li>
-                    <li><a href="/stories">Stories</a></li>
-                    <li><a href="/news_events">News & Events</a></li>
-                    <li><a href="/getinvolved">Get Involved</a></li>
-                    <li><a href="/contactus">Contact Us</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About Us</Link></li>
+                    <li><Link to="/programs">Programs</Link></li>
+                    <li><Link to="/stories">Stories</Link></li>
+                    <li><Link to="/news_events">News & Events</Link></li>   
+                    <li><Link to="/getinvolved">Get Involved</Link></li>
+                    <li><Link to="/contactus">Contact Us</Link></li>
                 </ul>
             </nav>
         </header>

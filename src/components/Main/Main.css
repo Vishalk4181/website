@@ -1,5 +1,10 @@
-/* Main.css */
-* {
+a{
+    text-decoration: none;
+}
+
+
+/* Reset and Box Sizing */
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,11 +13,13 @@
 html, body {
     height: 100%;
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    overflow-x: hidden;
+    font-family: serif;
 }
 
+/* Main Section */
 .main {
-    height: 100vh; /* Fullscreen height */
+    height: 100vh;
     width: 100%;
     position: relative;
     display: flex;
@@ -20,6 +27,7 @@ html, body {
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .background-image {
@@ -28,10 +36,11 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../../assets/images/Background\ Image.jpg') no-repeat center center fixed; /* Background image */
+    background: url('../../assets/images/Background Image.jpg') no-repeat center center fixed;
     background-size: cover;
     z-index: -1;
-    opacity: 0.7; /* Adjust opacity to create fade effect */
+    opacity: 0.8;
+    filter: blur(5px);
 }
 
 .overlay {
@@ -40,10 +49,10 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)); /* Gradient overlay for fading effect */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6));
     z-index: -1;
 }
-
+/* Carousel */
 .carousel-container {
     position: relative;
     z-index: 1;
@@ -54,202 +63,204 @@ html, body {
 .carousel-image {
     width: 100%;
     height: auto;
-    max-height: 80vh; /* Adjust max height as needed */
+    max-height: 80vh;
     object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    animation: fadeIn 1s ease-in;
+}
+
+.carousel-image:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
 }
 
 
 
 
-.more-info{
-    margin-top: 10px;
-    max-width: 10rem;
-    align-self: center;
-}
-
-.more-info:hover {
-    background: #ff9604;
-}
-
-
+/* Courses Offered Section */
 .courses-offered {
     padding: 50px 20px;
-    background: linear-gradient(to right, #fff7d2, #9ffceb);
+    background: linear-gradient(to right, #f3e5ab, #e3f2fd);
     text-align: center;
-    font-size: 1.5rem;
 }
 
-.courses h2 {
-    font-size: larger;
+.courses-offered h2 {
+    text-align: center;
+    font-size: 3.5rem; /* Larger font size for more impact */
     margin-bottom: 20px;
-    color: #333;
-    text-transform: uppercase;
+    color: #f57f17; /* Light saffron color */
+    font-weight: 700;
+    position: relative;
+    animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out; /* Bounce-in animation */
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5); /* Enhanced text shadow */
+    letter-spacing: 2px; /* Increased letter spacing */
 }
 
-.courses .intro{
-    font-size: 0.5rem;
-    margin-bottom: 40px;
+.courses-offered h2::after {
+    content: '';
+    display: block;
+    width: 400px; /* Wider underline for emphasis */
+    height: 8px;
+    background: linear-gradient(45deg, #fe851c, #6fbeff); /* Initial gradient */
+    margin: 10px auto 0;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-size: 200% 200%; /* Larger background to enable smooth animation */
+    animation: gradientMove 4s linear infinite; /* Continuous, smooth animation */
+  }
+
+
+.courses-offered .intro {
+    font-size: 1rem;
     color: #6e6e6e;
     max-width: 800px;
-    margin: 0 auto 80px auto;
+    margin: 0 auto;
     line-height: 1.5;
+    animation: slideUp 1s ease-out;
+    text-decoration: none;
 }
 
-.course-sections{
+/* Course Sections */
+.course-sections {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 80px;
 }
+
 .course-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 80px;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    gap: 100px;
+    margin: 80px auto;
 }
 
 .course-sector {
-    background:rgb(161, 195, 217);
-    box-shadow: 0 8px 0px #ffb028;
-    border-radius: 15px;
-    padding: 40px;
-    width: 350px;
-    height: 400px;
-    min-width: 280px;
-    transition: transform 0.2s, background 0.7s;
-    position: relative;
-    overflow: hidden;
+    background: linear-gradient(135deg, #e4f0f1, #c3e0e5); /* Updated gradient */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adjusted shadow */
+    border-radius: 20px; /* Updated border radius */
+    padding: 40px; /* Updated padding */
+    width: 450px; /* Adjusted width */
+    max-height: 600px; /* Adjusted height */
+    min-width: 300px; /* Updated minimum width */
+    transition: transform 0.3s ease, background 0.3s ease;
     background-size: cover;
     background-position: center;
+    position: relative;
     overflow-y: auto;
-}
-
-.course-sector::-webkit-scrollbar {
-    width : 5px;
-}
-
-.course-sector::-webkit-scrollbar-track {
-    background: #ffb028;
-    border-radius: 15px;
-}
-
-.course-sector::-webkit-scrollbar-thumb {
-    background: #a9caff;
-    border-radius: 15px;
-}
-
-.course-sector::-webkit-scrollbar-thumb:hover {
-    background: #ffb028;
+    animation: fadeInUp 1s ease-out;
 }
 
 .course-sector:hover {
-    transform: translateY(-15px);
-}
-
-.course-sector:hover .course-header, 
-.course-sector:hover .course-details {
-    color: #ff8c08;
+    transform: translateY(-10px);
+    background: linear-gradient(135deg, #c3e0e5, #e4f0f1); /* Updated hover gradient */
 }
 
 .course-header {
-    padding: 1px;
+    padding: 5px;
     border-bottom: 3px solid #ff9822;
-    margin-bottom: 30px;
-    transition: border-color 0.5s;
+    margin-bottom: 50px;
 }
 
 .course-sector h3 {
-    font-size: 1.8rem;
-    background:linear-gradient(60deg, #79c0fed2,#ffa200d6);
-    color: #f3f1f1;
-    padding: 20px;
+    font-size: 2rem;
+    background: linear-gradient(60deg, #79c0fe, #ffa200);
+    color: #fff;
+    padding: 30px;
     border-radius: 20px;
-    margin-bottom: 0px;
-    transition: background 0.3s, transform 0.3s;
+    margin-bottom: 0;
+    transition: background 0.5s, transform 0.3s;
+    text-decoration: none;
 }
 
-.course-sector:hover{
-    transform: translateY(-10px);
+.course-header h3 {
+    font-size: 1.8rem; /* Updated font size */
+    background: linear-gradient(60deg, #ffa200, #79c0fe); /* Updated gradient */
+    color: #fff;
+    padding: 20px; /* Updated padding */
+    border-radius: 15px; /* Updated border radius */
+    margin-bottom: 0;
+    transition: background 0.5s, transform 0.3s;
+    text-decoration: none;
 }
 
-.course-sector .certification {
-    font-size: 1rem;
-    background:rgba(255, 255, 255, 0.686);
-    color: #000000;
-    padding: 1px;
-    border-radius: 5px;
+
+.course-header p {
+    background: #fdfdfd;
+    border-radius: 20%;
+    margin-top: 10px;
     margin-bottom: 10px;
-    transition: background 0.3s, transform 0.3s;
+}
+
+.course-sector:hover h3 {
+    background: linear-gradient(60deg, #ffa200, #79c0fe);
+    transform: scale(1.05);
+    text-decoration: none;
 }
 
 .course-details {
+    text-decoration: none;
     text-align: center;
 }
 
 .course-item {
-    color: #f3f1f1;
-    background: linear-gradient(60deg, #79c0fed2,#ffa200d6);
+    color: #fff;
+    background: linear-gradient(60deg, #79c0fe, #ffa200);
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 25px;
     transition: background 0.3s, transform 0.3s;
+    animation: fadeInUp 1s ease-out;
+    text-decoration: none;
 }
 
 .course-item:hover {
-    color: #ff9822;
-    background: rgba(255, 255, 255, 1);
+    color: #ffa200;
+    background: #fff;
     transform: translateY(-10px);
 }
 
-.course-item h4 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    transition: color 0.3s;
-}
-
-.course-item h4 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    transition: color 0.3s;
-}
-
-.course-item p {
-    font-size: 1rem;
-    color: #555;
-    transition: color 0.3s;
-}
-
+/* Background Images */
 .apparel {
     background-image: url('../../assets/images/Apparel.jpg');
+    animation: backgroundShift 20s linear infinite;
 }
 
 .hospitality {
     background-image: url('../../assets/images/Hospitality.jpg');
+    animation: backgroundShift 20s linear infinite;
 }
 
 .it-ites {
     background-image: url('../../assets/images/IT.jpg');
+    animation: backgroundShift 20s linear infinite;
 }
 
 .paramedics {
     background-image: url('../../assets/images/Paramedic.jpg');
+    animation: backgroundShift 20s linear infinite;
 }
 
 .electrical {
     background-image: url('../../assets/images/Electrical.jpg');
+    animation: backgroundShift 20s linear infinite;
 }
 
-.operating-model{
-    padding: 1rem;
-    background: linear-gradient(to right, #fff7d2, #9ffceb);
-    background-size: cover;
-    color: #333;
+/* Operating Model */
+.operating-model {
+    padding: 2rem;
+    background: linear-gradient(to right, #f3e5ab, #e3f2fd);
+    color:#ff7700;
     position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in, pulse 3s infinite;
 }
 
-.operating-model::before{
+.operating-model::before {
     content: '';
     position: absolute;
     top: 0;
@@ -260,107 +271,140 @@ html, body {
     z-index: -1;
 }
 
-.operating-model>*{
+.operating-model h2 {
+    text-align: center;
+    font-size: 3.5rem; /* Larger font size for more impact */
+    margin-bottom: 20px;
+    color: #f57f17; /* Light saffron color */
+    font-weight: 700;
     position: relative;
-    z-index: 2;
+    animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out; /* Bounce-in animation */
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5); /* Enhanced text shadow */
+    letter-spacing: 1.5px; /* Increased letter spacing */
 }
 
+.operating-model h2::after {
+    content: '';
+    display: block;
+    width: 400px; /* Wider underline for emphasis */
+    height: 8px;
+    background: linear-gradient(45deg, #fe851c, #6fbeff); /* Initial gradient */
+    margin: 10px auto 0;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-size: 200% 200%; /* Larger background to enable smooth animation */
+    animation: gradientMove 4s linear infinite; /* Continuous, smooth animation */
+  }
+
+
+.operating-model .intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #6e6e6e;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Operating Sections */
 .operating-sections {
+    padding: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .operating-sector {
-    background: linear-gradient(60deg, #79c0fed2,#ffa200d6);
+    background: linear-gradient(135deg, #c3e0e5, #e4f0f1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
-    padding: 2.5rem;
+    border-radius: 15px;
+    padding: 3.5rem;
     margin-bottom: 1rem;
-    width: 28%;
-    height: 25%;
-    transition: transform 0.3s, background 0.3s;
-    position: relative;
-    overflow: hidden;
+    width: 500px;
+    height: 350px;
+    transition: transform 0.3s ease, background 0.3s ease;
     background-size: cover;
     background-position: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out;
 }
 
 .operating-sector:hover {
     transform: translateY(-10px);
+    background: linear-gradient(135deg, #e4f0f1, #c3e0e5);
 }
 
 .operating-header {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 10px;
+    background: linear-gradient(60deg, #ffa200, #79c0fe);
+    padding: 30px;
     border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .operating-header h3 {
     font-size: 1.5rem;
-    margin: 0;
     color: #333;
 }
 
 .operating-sector p {
-    background: linear-gradient(60deg, #79c0fed2,#ffa200d6);
-    background-color: #f3f1f1;
-    border: #f9f9f9;
-    border-style: double;
-    margin-top: 20px;
-    text-align: left;
+    background: linear-gradient(60deg, #79c0fe, #ffa200);
     color: #555;
     padding: 10px;
-}
-.operating-sector p:hover{
-    background: #f9f9f9;
-}
-
-.operating-model h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #333;
-    text-transform: uppercase;
-}
-
-.operating-model .intro {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #6e6e6e;
-    max-width: 800px;
-    margin: 0 auto 80px auto;
-    line-height: 1.5;
-}
-
-.operating-sections {
-    margin-top: 80px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 100px;
-}
-
-
-
-
-.sustainable-development {
-    padding: 2rem;
-    background: linear-gradient(to right, #fff7d2, #9ffceb);
-    color: #333;
+    border-radius: 10px;
+    margin-top: 40px;
     text-align: center;
 }
 
-.sustainable-development h2 {
-    font-size: 2rem;
-    margin-bottom: 0.3rem;
+/* Sustainable Development */
+.sustainable-development {
+    padding: 50px 20px;
+    background: linear-gradient(to right, #f3e5ab, #e3f2fd);
+    color: #333;
+    text-align: center;
+    animation: fadeInUp 1s ease-out, pulse 3s infinite;
 }
+
+/*sections main heading */
+.sustainable-development h2 {
+    text-align: center;
+    font-size: 3.5rem; /* Larger font size for more impact */
+    margin-bottom: 20px;
+    color: #f57f17; /* Light saffron color */
+    font-weight: 700;
+    position: relative;
+    animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out; /* Bounce-in animation */
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5); /* Enhanced text shadow */
+    letter-spacing: 1px; /* Increased letter spacing */
+}
+
+.sustainable-development h2::after {
+    content: '';
+    display: block;
+    width: 400px; /* Wider underline for emphasis */
+    height: 8px;
+    background: linear-gradient(45deg, #fe851c, #6fbeff); /* Initial gradient */
+    margin: 10px auto 0;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-size: 200% 200%; /* Larger background to enable smooth animation */
+    animation: gradientMove 4s linear infinite; /* Continuous, smooth animation */
+  }
+
 
 .sustainable-development p {
+    
     font-size: 1.1rem;
     margin-top: 20px;
+    margin-bottom: 80px;
+    color: #666;
 }
 
+/* Sustainable Sections */
 .sustainable-sections {
     display: flex;
     flex-wrap: wrap;
@@ -369,26 +413,34 @@ html, body {
 }
 
 .sustainable-sector {
-    background: linear-gradient(60deg, #79c0fed2,#ffa200d6);
-    border-radius: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 25%;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #c3e0e5, #e4f0f1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adjusted shadow */
+    border-radius: 20px; /* Updated border radius */
+    padding: 30px; /* Updated padding */
+    margin-bottom: 1rem;
+    width: 500px; /* Updated width */
+    max-height: 600px; /* Updated height */
+    transition: transform 0.3s ease, background 0.3s ease;
+    background-size: cover;
+    background-position: center;
     position: relative;
-    transition: transform 0.3s;
+    overflow-y: auto;
+    animation: fadeInUp 1s ease-out;
 }
 
 .sustainable-sector:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    background: #f9f9f9; /* Updated hover background */
 }
 
 .sustainable-header h3 {
-    background: #fff;
-    padding: 10px;
-    border-radius: 5%;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-top: 10px;
+    background: linear-gradient(60deg, #79c0fe, #ffa200);
+    font-size: 2rem; /* Updated font size */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .sustainable-details {
@@ -396,69 +448,72 @@ html, body {
 }
 
 .sustainable-item {
-    background: linear-gradient(60deg, #79c0fed2,#ffa200d6);;
-    margin-bottom: 1rem;
-    position: relative;
+    background: #fff;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.3s;
+    animation: fadeInUp 1s ease-out;
+    }
+.sustainable-item:hover {
+    transform: translateY(-5px);
+    background: #fdfdfd;
 }
-.sustainable-item:hover .more-info {
-    display: block;
-}
-
-
 
 .goal-details {
-    margin-top:40px ;
-    border: #fdfdfd;
-    border-radius: 15%;
-    border-style: ridge;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px;
-    background: linear-gradient(60deg, #79c0fed2,#ffa200d6);
-    border-radius: 0 0 10px 10px;
+    background: linear-gradient(60deg, #79c0fe, #ffa200);
+margin-top: 0;
+border: none;
+display: flex;
+flex-direction: column;
+gap: 15px;
+padding: 15px;
+background: #fff;
+border-radius: 10px;
 }
-.goal-details:hover{
+
+.goal-details:hover {
     background: #fdfdfd;
 }
 
 .goal-description {
+    
     text-align: center;
-    font-size: 1em;
-    color: #555;
-}
+    font-size: 1.1em;
+    color: #333;
+    }
 
-.goal-stats {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    line-height: 40px;
-}
+    .goal-stats {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        line-height: 1.5;
+        }
 
-.goal-stat {
-    flex: 1;
-    text-align: auto;
-}
+        .goal-stat {
+            flex: 1;
+            text-align: center;
+            }
 
-.goal-stats p {
-    margin: 0;
-}
+            .goal-stats p {
+                margin: 0;
+                font-size: 1em;
+                color: #666;
+                }
 
-.goal-details:hover .more-info {
-    display: block;
-}
-
-
-
+/* Section Container */
 .section-container {
-    background: linear-gradient(to right, #fff7d2, #9ffceb);
+    background: linear-gradient(to right, #f3e5ab, #e3f2fd);
     display: flex;
     align-items: center;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out;
 }
 
 .section-container img {
@@ -466,6 +521,12 @@ html, body {
     width: 30%;
     border-radius: 10px;
     margin-right: 70px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.section-container img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    opacity: 0.9;
 }
 
 .section-content {
@@ -474,18 +535,179 @@ html, body {
 }
 
 .section-content h2 {
-    font-size: 2.5em;
-    color: #333;
+    text-align: center;
+    font-size: 3.5rem; /* Larger font size for more impact */
+    margin-bottom: 50px;
+    color: #f57f17; /* Light saffron color */
+    font-weight: 700;
+    position: relative;
+    animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out; /* Bounce-in animation */
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5); /* Enhanced text shadow */
+    letter-spacing: 0px; /* Increased letter spacing */
 }
+
+.section-content h2::after {
+    content: '';
+    display: block;
+    width: 400px; /* Wider underline for emphasis */
+    height: 8px;
+    background: linear-gradient(45deg, #fe851c, #6fbeff); /* Initial gradient */
+    margin: 15px auto 0;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-size: 200% 200%; /* Larger background to enable smooth animation */
+    animation: gradientMove 4s linear infinite; /* Continuous, smooth animation */
+  }
 
 .section-content p {
     font-size: 1.2em;
     color: #666;
     margin-bottom: 15px;
     text-align: justify;
-    margin-bottom: 40px;
 }
 
 .section-content p strong {
     font-weight: bold;
+}
+
+/* Custom Scrollbar for Course and Sustainable Sectors */
+.course-sector::-webkit-scrollbar,
+.sustainable-sector::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.course-sector::-webkit-scrollbar-track,
+.sustainable-sector::-webkit-scrollbar-track {
+    background: #e4e4e4; /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+.course-sector::-webkit-scrollbar-thumb,
+.sustainable-sector::-webkit-scrollbar-thumb {
+    background: linear-gradient(60deg, #79c0fe, #ffa200); /* Gradient color for the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    transition: background 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.course-sector::-webkit-scrollbar-thumb:hover,
+.sustainable-sector::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(60deg, #ffa200, #79c0fe); /* Change color on hover for a modern effect */
+}
+
+.course-sector,
+.sustainable-sector {
+    scrollbar-width: thin; /* Firefox scrollbar width */
+    scrollbar-color: #ffa200 #e4e4e4; /* Firefox thumb and track color */
+    overflow-y: auto;
+}
+
+/* Ensure smooth scrolling */
+.course-sector,
+.sustainable-sector {
+    scroll-behavior: smooth;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes backgroundShift {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hide scrollbar for WebKit browsers */
+.course-sector::-webkit-scrollbar,
+.sustainable-sector::-webkit-scrollbar {
+    width: 0px; /* Hides the scrollbar */
+}
+
+.course-sector::-webkit-scrollbar-track,
+.sustainable-sector::-webkit-scrollbar-track {
+    background: transparent; /* Hide the scrollbar track */
+}
+
+.course-sector::-webkit-scrollbar-thumb,
+.sustainable-sector::-webkit-scrollbar-thumb {
+    background: transparent; /* Hide the scrollbar thumb */
+}
+
+/* Hide scrollbar for Firefox */
+.course-sector,
+.sustainable-sector {
+    scrollbar-width: none; /* Hides the scrollbar in Firefox */
 }

@@ -8,7 +8,7 @@ function Footer() {
             <div className="container">
                 <div className="footer-logo">
                     <img src={logo} alt="Logo" />
-                    <h2>Shri Madhav Jan Seva Nyas</h2>
+                    <h2>Shri Madhav Jan Sewa Nyas</h2>
                     <p className="footer-description">
                         Center Of Education, Skills & Career Advancement (CESCA)
                     </p>
@@ -23,7 +23,7 @@ function Footer() {
                     <a href="/contact">Contact Us</a>
                 </div>
                 <div className="footer-bottom">
-                    <p>&copy; 2024 Shri Madhav Jan Seva Nyas. All rights reserved.</p>
+                    <p>&copy; 2024 Shri Madhav Jan Sewa Nyas. All rights reserved.</p>
                 </div>
             </div>
         </footer>

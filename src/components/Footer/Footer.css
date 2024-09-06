@@ -1,29 +1,18 @@
-html, body {
-    height: 100%;
-    margin: 0;
+/* Footer */
+.footer {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #5196c7, #ffe869);
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
 }
 
-.wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: calc(100% - 100px);}
-
-.footer {
-    background: linear-gradient(45deg, #5196c7, #ffe869);
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    padding: 20px 0;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    width: 100%;
-    flex-shrink: 0;
-    min-height: 100%;
-    position: relative;
-}   
-
+/* Footer Container */
 .footer .container {
     display: flex;
     flex-direction: column;
@@ -31,38 +20,58 @@ html, body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
+/* Footer Logo */
 .footer .footer-logo {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    animation: bounceIn 1s ease-in-out;
 }
 
 .footer .footer-logo img {
     height: 50px;
     margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer .footer-logo img:hover {
+    transform: rotate(360deg) scale(1.1); /* Added slight scaling on hover */
 }
 
 .footer .footer-logo h2 {
     font-size: 1.5em;
     margin: 0;
     color: #f39c12;
+    animation: fadeInUp 1s ease-in-out;
 }
 
+/* Footer Description */
 .footer .footer-description {
     font-size: 0.9em; 
     margin-top: 5px;
     margin-bottom: 20px;
     max-width: 800px;
+    animation: fadeIn 1.5s ease-in-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
+.footer .footer-description p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Footer Links */
 .footer .footer-links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
 .footer .footer-links a {
@@ -70,8 +79,9 @@ html, body {
     margin: 0 10px;
     text-decoration: none;
     font-size: 0.9em;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
     position: relative;
+    animation: linkFadeIn 2s ease-in-out;
 }
 
 .footer .footer-links a::after {
@@ -92,8 +102,10 @@ html, body {
 
 .footer .footer-links a:hover {
     color: #f39c12;
+    transform: translateY(-2px) scale(1.1); /* Slight scaling on hover */
 }
 
+/* Footer Bottom */
 .footer .footer-bottom {
     font-size: 0.8em;
     border-top: 1px solid #7f8c8d;
@@ -101,4 +113,63 @@ html, body {
     margin-top: 10px;
     width: 100%;
     text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes linkFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animations with delay for a more dynamic look */
+.footer .footer-description {
+    animation-delay: 0.5s;
+}
+
+.footer .footer-links {
+    animation-delay: 1s;
+}
+
+.footer .footer-bottom {
+    animation-delay: 1.5s;
 }

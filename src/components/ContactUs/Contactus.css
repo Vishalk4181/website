@@ -1,0 +1,237 @@
+/* Overall Page Styles */
+.contact-page {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  background: linear-gradient(to right, #f3e5ab, #e3f2fd); /* Light yellow to light blue gradient */
+  color: #333;
+  animation: fadeIn 1.5s ease-in;
+}
+
+/* Heading */
+.heading h1 {
+  font-size: 3.5rem;
+  color: #f57f17; /* Saffron color for consistency */
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5); /* Enhanced text shadow */
+  animation: fadeIn 1.5s ease-in-out, bounceIn 1.2s ease-in-out;
+}
+
+/* Section Titles */
+h2 {
+  font-size: 2.2rem;
+  color: #f57f17; /* Consistent saffron color */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+  animation: zoomIn 1.2s ease-in-out;
+}
+
+/* Address Section */
+.address-section {
+  margin-bottom: 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  animation: slideLeft 1.5s ease-out, pulse 2s infinite;
+}
+
+.address-section p {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Additional Information */
+.additional-info {
+  margin-bottom: 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  animation: slideLeft 1.5s ease-out, pulse 2s infinite;
+}
+
+/* Course Inquiries */
+.course-inquiries {
+  margin-bottom: 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  animation: slideRight 1.5s ease-out, pulse 2s infinite;
+}
+
+.course-inquiries p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Form Container */
+.form-container {
+  background: linear-gradient(145deg, #ffffff, #f0f4f8); /* Subtle gradient background */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: slideUp 1.2s ease-out, pulse 2s infinite;
+}
+
+.form-container h2 {
+  font-size: 2rem;
+  color: #f57f17;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background-color: rgba(255, 255, 255, 0.9); /* Light focus effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Button */
+.form-group button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  background: #f57f17;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s;
+}
+
+.form-group button:hover {
+  background: #ff9604;
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(245, 127, 23, 0.7); /* Saffron color */
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(245, 127, 23, 0); /* Expand and fade out */
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(245, 127, 23, 0); /* Reset */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heading h1 {
+    font-size: 2.5rem; /* Adjusted for smaller screens */
+  }
+
+  .form-container {
+    padding: 20px; /* Reduced padding for smaller screens */
+  }
+}

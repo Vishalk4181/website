@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.programs {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #f3e5ab, #e3f2fd);
+  color: #333;
+  font-family: 'Poppins', sans-serif; /* Modern and clean font */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #f57f17; /* Saffron color */
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: relative;
+  animation: fadeIn 1s ease-out;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 50px; /* Space between cards */
+}
+
+.program-card {
+  background: #fff;
+  border-radius: 15px;
+  border: 1px solid #f5933e; /* Saffron color border */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  animation: fadeIn 1s ease-out, slideIn 1s ease-in-out, pulse 2s infinite; /* Added pulse animation */
+  margin-bottom: 30px; /* Increased gap between cards */
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.program-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #f57f17; /* Saffron color for icons */
+}
+
+.program-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.program-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
