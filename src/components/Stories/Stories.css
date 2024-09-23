@@ -1,69 +1,116 @@
 .stories {
-    padding: 60px 20px;
-    background: linear-gradient(to right, #e3f2fd, #f3e5ab); /* Light blue to light yellow gradient */
-    color: #333;
-    font-family: 'Lora', serif;
-  }
-  
-  .stories-heading {
-    text-align: center;
-    font-size: 3.2rem; /* Larger font size for more impact */
-    margin-bottom: 60px;
-    color: #f57f17; /* Light saffron color */
-    font-weight: 900;
-    position: relative;
-    animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out; /* Bounce-in animation */
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5); /* Enhanced text shadow */
-    letter-spacing: 2px; /* Increased letter spacing */
-  }
-  
-  .stories-heading::after {
-    content: '';
-    display: block;
-    width: 400px; /* Wider underline for emphasis */
-    height: 8px;
-    background: linear-gradient(45deg, #fe851c, #6fbeff); /* Initial gradient */
-    margin: 20px auto 0;
-    border-radius: 5px;
-    background-size: 200% 200%; /* Larger background to enable smooth animation */
-    animation: gradientMove 4s linear infinite; /* Continuous, smooth animation */
-  }
+  padding: 60px 20px;
+  background: linear-gradient(to right, #e3f2fd, #f3e5ab); /* Light blue to light yellow gradient */
+  color: #333;
+  font-family: 'Poppins', sans-serif; /* Consistent font style */
+  animation: fadeIn 1s ease-out; /* Fade-in animation */
+}
 
+.stories-heading {
+  text-align: center;
+  font-size: 3.2rem; /* Larger font size for impact */
+  margin-bottom: 60px;
+  color: #f57f17; /* Saffron color for consistency */
+  font-weight: 700;
+  position: relative;
+  animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out; /* Bounce-in animation */
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5); /* Enhanced text shadow */
+  letter-spacing: 2px; /* Increased letter spacing */
+}
 
-  .story-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .story {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .story:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .story-title {
-    font-size: 1.5rem;
-    color: #f57f17;
-    margin-bottom: 10px;
-  }
-  
-  .story-date {
-    font-size: 1rem;
-    color: #888;
-    margin-bottom: 10px;
-  }
-  
-  .story-content {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.6;
-  }
-  
+.stories-heading::after {
+  content: '';
+  display: block;
+  width: 400px; /* Wider underline for emphasis */
+  height: 8px;
+  background: linear-gradient(45deg, #fe851c, #6fbeff); /* Gradient underline */
+  margin: 20px auto 0;
+  border-radius: 5px;
+  background-size: 200% 200%; /* Smooth animation effect */
+  animation: gradientMove 4s linear infinite; /* Continuous gradient animation */
+}
+
+.story-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.story {
+  background: #fff;
+  border-radius: 15px; /* Rounded corners for consistency */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  padding: 30px; /* Increased padding for better content spacing */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-out, slideUp 1s ease-in-out; /* Fade-in and slide-up animations */
+}
+
+.story:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.story-title {
+  font-size: 1.5rem;
+  color: #f57f17; /* Consistent saffron color */
+  margin-bottom: 10px;
+  font-weight: 700; /* Bold title */
+}
+
+.story-date {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.story-content {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes gradientMove {
+0% {
+  background-position: 0% 0%;
+}
+100% {
+  background-position: 100% 100%;
+}
+}
+
+@keyframes fadeIn {
+from {
+  opacity: 0;
+  transform: translateY(10px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+@keyframes bounceIn {
+0% {
+  transform: scale(0.8);
+  opacity: 0;
+}
+50% {
+  transform: scale(1.1);
+}
+100% {
+  transform: scale(1);
+  opacity: 1;
+}
+}
+
+@keyframes slideUp {
+from {
+  transform: translateY(20px);
+  opacity: 0;
+}
+to {
+  transform: translateY(0);
+  opacity: 1;
+}
+}

@@ -10,29 +10,10 @@ import Stories from './components/Stories/Stories.js';
 import News_Events from './components/NewsEEvents/News_Events.js';
 import GetInvolved from './components/GetInvolved/GetInvolved.js';
 import ContactUs from './components/ContactUs/ContactUs.js';
+import DonateUs from './components/DonateUs/Donate.js';
 
 
 
-// {Courses Offered}
-
-import DiplomaInFashionDesigning from './components/CoruseDetails/Apparel/DiplomaInFashionDesigning.js';
-import GarmentConstructionTechniques from './components/CoruseDetails/Apparel/GarmentConstructionTechniques.js';
-
-import HospitalityManagement from './components/CoruseDetails/Hospitality/HospitalityManagement.js';
-import Entrepreneurship from './components/CoruseDetails/Hospitality/Entrepreneurship.js';
-
-import DigitalMarketing from './components/CoruseDetails/IT/DigitalMarketing.js';
-import BasicComputer from './components/CoruseDetails/IT/BasicComputer.js';
-import ComputerApplication from './components/CoruseDetails/IT/ComputerApplication.js';
-
-import LabTechnology from './components/CoruseDetails/Paramedics/LabTechnology.js';
-import Radiology from './components/CoruseDetails/Paramedics/Radiology.js';
-import OTTechnician from './components/CoruseDetails/Paramedics/OTTechnician.js';
-import PhlebotomyAssistant from './components/CoruseDetails/Paramedics/PhlebotomyAssistant.js';
-
-import HouseWiring from './components/CoruseDetails/Electrical/HouseWiring.js';
-import SolarTechnician from './components/CoruseDetails/Electrical/SolarTechnician.js';
-import HomeAppliance from './components/CoruseDetails/Electrical/HomeAppliance.js';
 
 
 
@@ -59,6 +40,30 @@ import LifeBelowWater from './components/SustainableDevelopment/LifeBelowWater/L
 import LifeAndLand from './components/SustainableDevelopment/LifeAndLand/LifeAndLand.js';
 
 
+//programs
+
+import HospitalHealthcare from './components/Programs/Pages/HostpitalHealthcare/hospitalhealthcare.js';
+import SkillDevelopment from './components/Programs/Pages/SkillDevelopment/skilldevelopment.js';
+import YogaMeditaion from './components/Programs/Pages/YogaMeditaion/yogameditaion.js';
+import SportsComplex from './components/Programs/Pages/SportsComplex/sportscomplex.js';
+import OrganicFarming from './components/Programs/Pages/OrganicFarming/organicfarming.js';
+import TissueCulture from './components/Programs/Pages/TissueCulture/tissueculture.js';
+
+
+
+//Sports Complex
+
+import Athletics from './components/Programs/Pages/SportsComplex/Athletics/athletics.js';
+import Badminton from './components/Programs/Pages/SportsComplex/Badminton/badminton.js';
+import Basketball from './components/Programs/Pages/SportsComplex/BasketBall/basketball.js';
+import Kabaddi from './components/Programs/Pages/SportsComplex/Kabbadi/kabbadi.js';
+import Kushti from './components/Programs/Pages/SportsComplex/Kushti/kushti.js';
+import Volleyball from './components/Programs/Pages/SportsComplex/VolleyBall/volleyball.js';
+
+
+
+
+
 
 function App() {
   return (
@@ -81,28 +86,7 @@ function App() {
           <Route path='/news_events' element={<News_Events />} />
           <Route path='/getinvolved' element={<GetInvolved />} />
           <Route path='/contactus' element={<ContactUs />} />
-
-
-
-
-          <Route path='/diplomainfashiondesigning' element={<DiplomaInFashionDesigning />} />
-          <Route path='/garmentconstruction' element={<GarmentConstructionTechniques />} />
-
-          <Route path='/hopitalitymanagement' element={<HospitalityManagement />} />
-          <Route path='/entrepreneurship' element={<Entrepreneurship />} />
-
-          <Route path='/digitalmarketing' element={<DigitalMarketing />} />
-          <Route path='/basiccomputer' element={<BasicComputer />} />
-          <Route path='/computerapplication' element={<ComputerApplication />} />
-
-          <Route path='/labtechnology' element={<LabTechnology />} />
-          <Route path='/radiology' element={<Radiology />} />
-          <Route path='/ottechnician' element={<OTTechnician />} />
-          <Route path='/phlebotomyassistant' element={<PhlebotomyAssistant />} />
-
-          <Route path='/housewiring' element={<HouseWiring />} />
-          <Route path='/solartechnician' element={<SolarTechnician />} />
-          <Route path='/homeappliance' element={<HomeAppliance />} />
+          <Route path='/donateus' element={<DonateUs />} />
 
 
 
@@ -128,6 +112,26 @@ function App() {
 
 
 
+
+        <Route path="/" element={<Programs />} />
+        <Route path="/components/Programs/Pages/HostpitalHealthcare/hospitalhealthcare.js" element={<HospitalHealthcare />} />
+        <Route path="/components/Programs/Pages/SkillDevelopment/skilldevelopment.js" element={<SkillDevelopment />} />
+        <Route path="/components/Programs/Pages/YogaMeditaion/yogameditaion.js" element={<YogaMeditaion />} />
+        <Route path="/components/Programs/pages/SportsComplex/sportscomplex.js" element={<SportsComplex />} />
+        <Route path="/components/Programs/Pages/OrganicFarming/organicfarming.js" element={<OrganicFarming />} />
+        <Route path="/components/Programs/Pages/TissueCulture/tissueculture.js" element={<TissueCulture />} />
+
+
+
+
+
+        <Route path="/" element={<SportsComplex />} />
+        <Route path="/components/Programs/Pages/SportsComplex/Athletics/athletics.js" element={<Athletics />} />
+        <Route path="/components/Programs/Pages/SportsComplex/Badminton/badminton.js" element={<Badminton />} />
+        <Route path="components/Programs/Pages/SportsComplex/BasketBall/basketball.js" element={<Basketball />} />
+        <Route path="/components/Programs/Pages/SportsComplex/Kabbadi/kabbadi.js" element={<Kabaddi />} />
+        <Route path="/components/Programs/Pages/SportsComplex/Kushti/kushti.js" element={<Kushti />} />
+        <Route path="/components/Programs/Pages/SportsComplex/VolleyBall/volleyball.js" element={<Volleyball />} />
 
 
 

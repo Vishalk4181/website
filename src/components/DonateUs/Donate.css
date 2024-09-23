@@ -1,0 +1,111 @@
+/* General Page Styling */
+.donation-page {
+  background: linear-gradient(to right, #e3f2fd, #f3e5ab); /* Light blue to light yellow gradient */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.donation-page .container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  animation: fadeIn 1.5s ease-in-out; /* Animation added for fade-in effect */
+}
+
+.donation-page .heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #f57f17; /* Saffron color */
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.donation-page .subheading {
+  font-size: 1.5rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form Styling */
+.donation-page .donation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.donation-page .form-group {
+  position: relative;
+}
+
+.donation-page .form-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #f57f17; /* Saffron color */
+}
+
+.donation-page .form-group input,
+.donation-page .form-group select {
+  width: 100%;
+  padding: 12px 40px;
+  font-size: 1rem; /* Consistent font size */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.donation-page .form-group input:focus,
+.donation-page .form-group select:focus {
+  border-color: #f57f17; /* Saffron color for focus */
+  outline: none;
+  box-shadow: 0 0 10px rgba(245, 127, 23, 0.3); /* Saffron color shadow */
+}
+
+.donation-page .form-group input::placeholder {
+  color: #999;
+}
+
+/* Button Styling */
+.donation-page .donate-button {
+  padding: 12px;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #f57f17, #ffa726); /* Saffron to lighter orange */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.donation-page .donate-button:hover {
+  background: linear-gradient(135deg, #ff9604, #ffb74d); /* Darker saffron hover */
+  transform: scale(1.05);
+}
+
+.donation-page .donate-button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .donation-page .container {
+    padding: 30px;
+    width: 90%; /* Full width on smaller screens */
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

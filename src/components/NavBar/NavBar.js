@@ -24,6 +24,7 @@ const NavBar = () => {
                     <li><Link to="/news_events">News & Events</Link></li>   
                     <li><Link to="/getinvolved">Get Involved</Link></li>
                     <li><Link to="/contactus">Contact Us</Link></li>
+                    <li><Link to="/donateus">Donate Us</Link></li>
                 </ul>
             </nav>
         </header>

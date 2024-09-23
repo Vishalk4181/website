@@ -1,0 +1,80 @@
+/* SportsComplex.css */
+.sports-complex {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #f3e5ab, #e3f2fd); /* Light yellow to light blue gradient */
+    color: #333;
+    font-family: 'Lora', serif;
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+  }
+  
+  /* Heading */
+  .sports-complex .heading {
+    text-align: center;
+    font-size: 3.2rem; /* Larger font size for impact */
+    color: #f57f17; /* Saffron color */
+    font-weight: 900;
+    position: relative;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5); /* Enhanced text shadow */
+    letter-spacing: 2px; /* Increased letter spacing */
+    animation: fadeIn 1.5s ease-in-out, bounceIn 1.2s ease-in-out; /* Bounce-in animation */
+  }
+  
+  /* Grid Layout */
+  .sports-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+    gap: 30px;
+  }
+  
+  /* Sport Card */
+  .sport-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .sport-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Sport Icon */
+  .sport-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #f57f17; /* Saffron color for icons */
+  }
+  
+  /* Sport Title */
+  .sport-title {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

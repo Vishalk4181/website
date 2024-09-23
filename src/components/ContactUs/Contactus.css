@@ -1,20 +1,20 @@
 /* Overall Page Styles */
 .contact-page {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif; /* Consistent font family */
   padding: 20px;
-  background: linear-gradient(to right, #f3e5ab, #e3f2fd); /* Light yellow to light blue gradient */
+  background: linear-gradient(to right, #e3f2fd, #f3e5ab); /* Light blue to light yellow gradient */
   color: #333;
-  animation: fadeIn 1.5s ease-in;
+  animation: fadeIn 0.5s ease-in;
 }
 
 /* Heading */
 .heading h1 {
-  font-size: 3.5rem;
-  color: #f57f17; /* Saffron color for consistency */
+  font-size: 3rem; /* Adjusted size for consistency */
+  color: #f57f17; /* Saffron color */
   text-align: center;
   margin-bottom: 20px;
-  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5); /* Enhanced text shadow */
-  animation: fadeIn 1.5s ease-in-out, bounceIn 1.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 /* Section Titles */
@@ -22,19 +22,19 @@ h2 {
   font-size: 2.2rem;
   color: #f57f17; /* Consistent saffron color */
   margin-bottom: 20px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
-  animation: zoomIn 1.2s ease-in-out;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+  animation: zoomIn 0.5s ease-in-out;
 }
 
 /* Address Section */
 .address-section {
   margin-bottom: 40px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.9); /* Light background with slight transparency */
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  animation: slideLeft 1.5s ease-out, pulse 2s infinite;
+  animation: slideLeft 0.5s ease-out, pulse 2s infinite;
 }
 
 .address-section p {
@@ -47,22 +47,22 @@ h2 {
 .additional-info {
   margin-bottom: 40px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.9); /* Light background with slight transparency */
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  animation: slideLeft 1.5s ease-out, pulse 2s infinite;
+  animation: slideLeft 0.5s ease-out, pulse 2s infinite;
 }
 
 /* Course Inquiries */
 .course-inquiries {
   margin-bottom: 40px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.9); /* Light background with slight transparency */
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  animation: slideRight 1.5s ease-out, pulse 2s infinite;
+  animation: slideRight 0.5s ease-out, pulse 2s infinite;
 }
 
 .course-inquiries p {
@@ -76,7 +76,7 @@ h2 {
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  animation: slideUp 1.2s ease-out, pulse 2s infinite;
+  animation: slideUp 0.5s ease-out, pulse 2s infinite;
 }
 
 .form-container h2 {
@@ -103,33 +103,36 @@ h2 {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
-  border-radius: 8px;
+  border-radius: 5px; /* Consistent with previous design */
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   transition: background-color 0.3s, box-shadow 0.3s ease;
+  background-color: #f9f9f9; /* Light background */
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   background-color: rgba(255, 255, 255, 0.9); /* Light focus effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(245, 127, 23, 0.3); /* Saffron color shadow */
+  border-color: #f57f17; /* Saffron color */
 }
 
 /* Form Button */
 .form-group button {
   width: 100%;
-  padding: 15px;
+  padding: 12px;
   font-size: 1.2rem;
-  background: #f57f17;
+  background: linear-gradient(135deg, #f57f17, #ffa726); /* Saffron to lighter orange */
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px; /* Consistent with previous design */
   cursor: pointer;
   transition: background 0.3s ease, transform 0.3s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .form-group button:hover {
-  background: #ff9604;
+  background: linear-gradient(135deg, #ff9604, #ffb74d); /* Darker saffron hover */
   transform: translateY(-3px); /* Slight lift on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -210,18 +213,6 @@ h2 {
   to {
     transform: scale(1);
     opacity: 1;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(245, 127, 23, 0.7); /* Saffron color */
-  }
-  50% {
-    box-shadow: 0 0 0 20px rgba(245, 127, 23, 0); /* Expand and fade out */
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(245, 127, 23, 0); /* Reset */
   }
 }
 
