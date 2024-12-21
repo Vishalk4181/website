@@ -1,7 +1,27 @@
 import React from 'react';
 import './hospitalhealthcare.css';
+import Slider from 'react-slick';
+
+
+import Hospital1 from '../../../../assets/images/Hospital1.jpg' 
+import Hospital2 from '../../../../assets/images/Hospital2.jpg'
+import Hospital3 from '../../../../assets/images/Hospital3.jpg'
+import Hospital4 from '../../../../assets/images/Hospital4.jpg'
+import Hospital5 from '../../../../assets/images/Hospital5.jpg'
+
+
 
 const HospitalHealthcare = () => {
+  const carouselSettings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Loop through slides
+    speed: 500, // Transition speed in milliseconds
+    slidesToShow: 1, // Show one slide at a time
+    slidesToScroll: 1, // Scroll one slide at a time
+    autoplay: true, // Enable auto-play
+    autoplaySpeed: 3000, // Time in milliseconds between slides
+    arrows: true, // Enable navigation arrows
+  };
   return (
     <div className="hospital-container">
       <h1 className="hospital-heading">Hospital & Healthcare Services</h1>
@@ -137,6 +157,29 @@ const HospitalHealthcare = () => {
         <ul>
           <li>Our hospital is committed to delivering high-quality healthcare with a focus on patient-centered care and community well-being.</li>
         </ul>
+
+        <div className="carousel-section">
+          <Slider {...carouselSettings}>
+            <div>
+              <img src={Hospital1} alt="Slide 1" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Hospital2} alt="Slide 2" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Hospital3} alt="Slide 3" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Hospital4} alt="Slide 4" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Hospital5} alt="Slide 5" className="carousel-image" />
+            </div>
+          </Slider>
+        </div>
+
+
+
       </section>
     </div>
   );

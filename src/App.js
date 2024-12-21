@@ -15,31 +15,6 @@ import DonateUs from './components/DonateUs/Donate.js';
 
 
 
-
-
-// {Operating Models}
-
-import Build from './components/OperatingModels/Build/Build.js';
-import Operate from './components/OperatingModels/Operate/Operate.js';
-import Assist from './components/OperatingModels/Assist/Assist.js';
-import Transfer from './components/OperatingModels/Transfer/Transfer.js';
-
-
-
-// {Sustainable Development}
-
-import NoPoverty from './components/SustainableDevelopment/NoPoverty/NoPoverty.js';
-import ZeroHunger from './components/SustainableDevelopment/ZeroHunger/ZeroHunger.js';
-import GoodHealth from './components/SustainableDevelopment/GoodHealth/GoodHealth.js';
-import QualityEducation from './components/SustainableDevelopment/QualityEducation/QualityEducation.js';
-import GenderEquality from './components/SustainableDevelopment/GenderEquality/GenderEquality.js';
-import CleanEnergy from './components/SustainableDevelopment/CleanEnergy/CleanEnergy.js';
-import IndustryInnovation from './components/SustainableDevelopment/IndustryInnovation/IndustryInnovation.js';
-import ReducedInequalities from './components/SustainableDevelopment/ReducedInequalities/ReducedInequalities.js';
-import LifeBelowWater from './components/SustainableDevelopment/LifeBelowWater/LifeBelowWater.js';
-import LifeAndLand from './components/SustainableDevelopment/LifeAndLand/LifeAndLand.js';
-
-
 //programs
 
 import HospitalHealthcare from './components/Programs/Pages/HostpitalHealthcare/hospitalhealthcare.js';
@@ -48,6 +23,7 @@ import YogaMeditaion from './components/Programs/Pages/YogaMeditaion/yogameditai
 import SportsComplex from './components/Programs/Pages/SportsComplex/sportscomplex.js';
 import OrganicFarming from './components/Programs/Pages/OrganicFarming/organicfarming.js';
 import TissueCulture from './components/Programs/Pages/TissueCulture/tissueculture.js';
+import Gaushala from './components/Programs/Pages/Gaushala/gaushala.js';
 
 
 
@@ -91,25 +67,6 @@ function App() {
 
 
 
-          <Route path='/build' element={<Build />} />
-          <Route path='/operate' element={<Operate />} />
-          <Route path='/assist' element={<Assist />} />
-          <Route path='/transfer' element={<Transfer />} />
-
-
-
-
-          <Route path='/nopoverty' element={<NoPoverty />} />
-          <Route path='/zerohunger' element={<ZeroHunger />} />
-          <Route path='/goodhealth' element={<GoodHealth />} />
-          <Route path='/qualityeducation' element={<QualityEducation />} />
-          <Route path='/genderequality' element={<GenderEquality />} />
-          <Route path='/cleanenergy' element={<CleanEnergy />} />
-          <Route path='/industryinnovation' element={<IndustryInnovation />} />
-          <Route path='/reducedinequalities' element={<ReducedInequalities />} />
-          <Route path='/lifebelowwater' element={<LifeBelowWater />} />
-          <Route path='/lifeandland' element={<LifeAndLand />} />
-
 
 
 
@@ -120,6 +77,7 @@ function App() {
         <Route path="/components/Programs/pages/SportsComplex/sportscomplex.js" element={<SportsComplex />} />
         <Route path="/components/Programs/Pages/OrganicFarming/organicfarming.js" element={<OrganicFarming />} />
         <Route path="/components/Programs/Pages/TissueCulture/tissueculture.js" element={<TissueCulture />} />
+        <Route path="/components/Programs/Pages/Gaushala/gausahala.js" element={<Gaushala />} />"
 
 
 

@@ -1,0 +1,164 @@
+
+.yoga-meditation-page {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #e3f2fd, #f3e5ab);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    animation: fadeIn 1s ease-out;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 3.2rem;
+    color: #f57f17; /* Saffron color */
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5);
+    letter-spacing: 2px;
+    position: relative;
+    animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 400px;
+    height: 8px;
+    background: linear-gradient(45deg, #fe851c, #6fbeff);
+    margin: 20px auto 0;
+    border-radius: 5px;
+    background-size: 200% 200%;
+    animation: gradientMove 4s linear infinite;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #000000;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.intro-section, .benefits-section, .impact-section, .process-section, .get-involved-section {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out, slideUp 1s ease-in-out;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #f57f17; /* Saffron color */
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.benefits-list {
+    list-style-type: disc;
+    margin-left: 40px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.benefits-list li {
+    margin-bottom: 10px;
+}
+
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step h3 {
+    color: #f57f17;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.get-involved-section {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-button {
+    background-color: #f7b731;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #ffdd59;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+}

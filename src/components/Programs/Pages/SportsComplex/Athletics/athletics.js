@@ -1,7 +1,24 @@
 import React from 'react';
 import './athletics.css';
+import Slider from 'react-slick';
+
+import Atheletics1 from '../../../../../assets/images/Atheletics1.jpg'
+import Atheletics2 from '../../../../../assets/images/Atheletics2.jpg'
+import Atheletics3 from '../../../../../assets/images/Atheletics3.jpg'
+import Atheletics4 from '../../../../../assets/images/Atheletics4.jpg'
+import Atheletics5 from '../../../../../assets/images/Atheletics5.jpg'
 
 const Athletics = () => {
+  const carouselSettings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Loop through slides
+    speed: 500, // Transition speed in milliseconds
+    slidesToShow: 1, // Show one slide at a time
+    slidesToScroll: 1, // Scroll one slide at a time
+    autoplay: true, // Enable auto-play
+    autoplaySpeed: 3000, // Time in milliseconds between slides
+    arrows: true, // Enable navigation arrows
+  };
   return (
     <div className="athletics-container">
       <h1 className="athletics-heading">Athletics Program Overview</h1>
@@ -86,6 +103,25 @@ const Athletics = () => {
           <li>We are dedicated to nurturing athletic talent with world-class facilities and expert coaching.</li>
         </ul>
       </section>
+      <div className="carousel-section">
+          <Slider {...carouselSettings}>
+            <div>
+              <img src={Atheletics1} alt="Slide 1" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Atheletics2} alt="Slide 2" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Atheletics3} alt="Slide 3" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Atheletics4} alt="Slide 4" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Atheletics5} alt="Slide 5" className="carousel-image" />
+            </div>
+          </Slider>
+        </div>
     </div>
   );
 };

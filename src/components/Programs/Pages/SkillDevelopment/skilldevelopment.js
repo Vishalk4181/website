@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './skilldevelopment.css';
+import Slider from 'react-slick';
+
+import Skill1 from '../../../../assets/images/Skill1.jpg'
+import Skill2 from '../../../../assets/images/Skill2.jpg'
+import Skill3 from '../../../../assets/images/Skill3.jpg'
+import Skill4 from '../../../../assets/images/Skill4.jpg'
+import Skill5 from '../../../../assets/images/Skill5.jpg'
+
+
+
 
 // Mock data for courses
 const courses = [
@@ -13,6 +23,17 @@ const courses = [
 ];
 
 const SkillDevelopmentCenter = () => {
+  const carouselSettings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Loop through slides
+    speed: 500, // Transition speed in milliseconds
+    slidesToShow: 1, // Show one slide at a time
+    slidesToScroll: 1, // Scroll one slide at a time
+    autoplay: true, // Enable auto-play
+    autoplaySpeed: 3000, // Time in milliseconds between slides
+    arrows: true, // Enable navigation arrows
+  };
+
   const [formData, setFormData] = useState({
     name: '',
     fatherMotherName: '',
@@ -63,10 +84,32 @@ const SkillDevelopmentCenter = () => {
   };
 
   return (
+
+    
     <section className="skill-development-center">
       <div className="container">
         <h1 className="heading">Skill Development Center</h1>
         <h2 className="subheading">Shri Madhav Kaushal Vikas Kendra</h2>
+
+        <div className="carousel-section">
+          <Slider {...carouselSettings}>
+            <div>
+              <img src={Skill1} alt="Slide 1" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Skill2} alt="Slide 2" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Skill3} alt="Slide 3" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Skill4} alt="Slide 4" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Skill5} alt="Slide 5" className="carousel-image" />
+            </div>
+          </Slider>
+        </div>
 
         {/* Ensure Section and SubSection components are defined */}
         <Section title="Introduction">
@@ -143,6 +186,9 @@ const SkillDevelopmentCenter = () => {
             Confidentiality obligations do not extend to information that is public, received from third parties without restrictions, or required to be disclosed by law.
           </p>
         </Section>
+
+
+
 
         {/* Courses Section */}
         <div className="section">

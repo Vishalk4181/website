@@ -1,7 +1,26 @@
 import React from 'react';
 import './kabbadi.css';
+import Slider from 'react-slick';
+
+import Kabbadi1 from '../../../../../assets/images/Kabbadi1.jpg'
+import Kabbadi2 from '../../../../../assets/images/Kabbadi2.jpg'
+import Kabbadi3 from '../../../../../assets/images/Kabbadi3.jpg'
+import Kabbadi4 from '../../../../../assets/images/Kabbadi4.jpg'
+import Kabbadi5 from '../../../../../assets/images/Kabbadi5.jpg'
+
 
 const Kabbadi = () => {
+  const carouselSettings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Loop through slides
+    speed: 500, // Transition speed in milliseconds
+    slidesToShow: 1, // Show one slide at a time
+    slidesToScroll: 1, // Scroll one slide at a time
+    autoplay: true, // Enable auto-play
+    autoplaySpeed: 3000, // Time in milliseconds between slides
+    arrows: true, // Enable navigation arrows
+  };
+
   return (
     <div className="kabaddi-container">
       <h1 className="kabaddi-heading">Kabaddi Program Overview</h1>
@@ -96,6 +115,26 @@ const Kabbadi = () => {
           <li>Shri Madhav Jan Sewa Nyas is committed to developing the next generation of Kabaddi champions with top-tier facilities and expert coaching.</li>
         </ul>
       </section>
+      <div className="carousel-section">
+          <Slider {...carouselSettings}>
+            <div>
+              <img src={Kabbadi1} alt="Slide 1" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Kabbadi2} alt="Slide 2" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Kabbadi3} alt="Slide 3" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Kabbadi4} alt="Slide 4" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Kabbadi5} alt="Slide 5" className="carousel-image" />
+            </div>
+          </Slider>
+        </div>
+
     </div>
   );
 };

@@ -1,7 +1,25 @@
 import React from 'react';
 import './organicfarming.css';
+import Slider from 'react-slick';
+
+import Organic1 from '../../../../assets/images/Organic1.jpg'
+import Organic2 from '../../../../assets/images/Organic2.jpg'
+import Organic3 from '../../../../assets/images/Organic3.jpg'
+import Organic4 from '../../../../assets/images/Organic4.jpg'
+import Organic5 from '../../../../assets/images/Organic5.jpg'
+
 
 const OrganicFarming = () => {
+  const carouselSettings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Loop through slides
+    speed: 500, // Transition speed in milliseconds
+    slidesToShow: 1, // Show one slide at a time
+    slidesToScroll: 1, // Scroll one slide at a time
+    autoplay: true, // Enable auto-play
+    autoplaySpeed: 3000, // Time in milliseconds between slides
+    arrows: true, // Enable navigation arrows
+  };
   return (
     <div className="organic-farming-container">
       <h1 className="organic-farming-heading">Organic Farming: Nurturing Nature</h1>
@@ -54,6 +72,26 @@ const OrganicFarming = () => {
           and chemical-free corn.
         </p>
       </section>
+
+      <div className="carousel-section">
+          <Slider {...carouselSettings}>
+            <div>
+              <img src={Organic1} alt="Slide 1" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Organic2} alt="Slide 2" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Organic3} alt="Slide 3" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Organic4} alt="Slide 4" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Organic5} alt="Slide 5" className="carousel-image" />
+            </div>
+          </Slider>
+        </div>
 
       <section className="vegetable-section">
         <h3>Carrots</h3>

@@ -1,7 +1,26 @@
 import React from 'react';
 import './basketball.css';
+import Slider from 'react-slick';
+
+import Basketball1 from '../../../../../assets/images/BasketBall1.jpg'
+import Basketball2 from '../../../../../assets/images/BasketBall2.jpg'
+import Basketball3 from '../../../../../assets/images/BasketBall3.jpg'
+import Basketball4 from '../../../../../assets/images/BasketBall4.jpg'
+import Basketball5 from '../../../../../assets/images/BasketBall5.jpg'
+
 
 const Basketball = () => {
+  const carouselSettings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Loop through slides
+    speed: 500, // Transition speed in milliseconds
+    slidesToShow: 1, // Show one slide at a time
+    slidesToScroll: 1, // Scroll one slide at a time
+    autoplay: true, // Enable auto-play
+    autoplaySpeed: 3000, // Time in milliseconds between slides
+    arrows: true, // Enable navigation arrows
+  };
+
   return (
     <div className="basketball-container">
       <h1 className="basketball-heading">Basketball Program Overview</h1>
@@ -86,6 +105,26 @@ const Basketball = () => {
           <li>Our Basketball program is committed to developing well-rounded athletes with expert coaching and state-of-the-art facilities.</li>
         </ul>
       </section>
+      <div className="carousel-section">
+          <Slider {...carouselSettings}>
+            <div>
+              <img src={Basketball1} alt="Slide 1" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Basketball2} alt="Slide 2" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Basketball3} alt="Slide 3" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Basketball4} alt="Slide 4" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Basketball5} alt="Slide 5" className="carousel-image" />
+            </div>
+          </Slider>
+        </div>
+
     </div>
   );
 };

@@ -1,7 +1,25 @@
 import React from 'react';
 import './badminton.css';
+import Slider from 'react-slick';
+
+import Badminton1 from '../../../../../assets/images/Badminton1.jpg'
+import Badminton2 from '../../../../../assets/images/Badminton2.jpg'
+import Badminton3 from '../../../../../assets/images/Badminton3.jpg'
+import Badminton4 from '../../../../../assets/images/Badminton4.jpg'
+import Badminton5 from '../../../../../assets/images/Badminton5.jpg'
 
 const Badminton = () => {
+  const carouselSettings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Loop through slides
+    speed: 500, // Transition speed in milliseconds
+    slidesToShow: 1, // Show one slide at a time
+    slidesToScroll: 1, // Scroll one slide at a time
+    autoplay: true, // Enable auto-play
+    autoplaySpeed: 3000, // Time in milliseconds between slides
+    arrows: true, // Enable navigation arrows
+  };
+
   return (
     <div className="badminton-container">
       <h1 className="badminton-heading">Badminton Program Overview</h1>
@@ -86,6 +104,26 @@ const Badminton = () => {
           <li>Our Badminton program is dedicated to nurturing talent with top-notch facilities and coaching.</li>
         </ul>
       </section>
+      <div className="carousel-section">
+          <Slider {...carouselSettings}>
+            <div>
+              <img src={Badminton1} alt="Slide 1" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Badminton2} alt="Slide 2" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Badminton3} alt="Slide 3" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Badminton4} alt="Slide 4" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Badminton5} alt="Slide 5" className="carousel-image" />
+            </div>
+          </Slider>
+        </div>
+
     </div>
   );
 };

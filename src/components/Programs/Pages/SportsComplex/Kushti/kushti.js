@@ -1,7 +1,26 @@
 import React from 'react';
 import './kushti.css';
+import Slider from 'react-slick';
+
+import Kushti1 from '../../../../../assets/images/Kushti1.jpg'
+import Kushti2 from '../../../../../assets/images/Kushti2.jpg'
+import Kushti3 from '../../../../../assets/images/Kushti3.jpg'
+import Kushti4 from '../../../../../assets/images/Kushti4.jpg'
+import Kushti5 from '../../../../../assets/images/Kushti5.jpg'
+
 
 const Kushti = () => {
+  const carouselSettings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Loop through slides
+    speed: 500, // Transition speed in milliseconds
+    slidesToShow: 1, // Show one slide at a time
+    slidesToScroll: 1, // Scroll one slide at a time
+    autoplay: true, // Enable auto-play
+    autoplaySpeed: 3000, // Time in milliseconds between slides
+    arrows: true, // Enable navigation arrows
+  };
+
   return (
     <div className="kushti-container">
       <h1 className="kushti-heading">Kushti (Wrestling) Program Overview</h1>
@@ -86,6 +105,26 @@ const Kushti = () => {
           <li>Our Kushti program is dedicated to preserving the essence of traditional wrestling while incorporating modern techniques for holistic development.</li>
         </ul>
       </section>
+      <div className="carousel-section">
+          <Slider {...carouselSettings}>
+            <div>
+              <img src={Kushti1} alt="Slide 1" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Kushti2} alt="Slide 2" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Kushti3} alt="Slide 3" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Kushti4} alt="Slide 4" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Kushti5} alt="Slide 5" className="carousel-image" />
+            </div>
+          </Slider>
+        </div>
+
     </div>
   );
 };

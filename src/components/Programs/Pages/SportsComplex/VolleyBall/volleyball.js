@@ -1,7 +1,25 @@
 import React from 'react';
 import './volleyball.css';
+import Slider from 'react-slick';
+
+import VolleyBall1 from '../../../../../assets/images/Volleyball1.jpg'
+import VolleyBall2 from '../../../../../assets/images/Volleyball2.jpg'
+import VolleyBall3 from '../../../../../assets/images/Volleyball3.jpg'
+import VolleyBall4 from '../../../../../assets/images/Volleyball3.jpg'
+import VolleyBall5 from '../../../../../assets/images/Volleyball5.jpg'
+
 
 const Volleyball = () => {
+  const carouselSettings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Loop through slides
+    speed: 500, // Transition speed in milliseconds
+    slidesToShow: 1, // Show one slide at a time
+    slidesToScroll: 1, // Scroll one slide at a time
+    autoplay: true, // Enable auto-play
+    autoplaySpeed: 3000, // Time in milliseconds between slides
+    arrows: true, // Enable navigation arrows
+  };
   return (
     <div className="volleyball-container">
       <h1 className="volleyball-heading">Volleyball Program Overview</h1>
@@ -86,6 +104,25 @@ const Volleyball = () => {
           <li>Our Volleyball program is committed to nurturing athletes with comprehensive training, top-notch facilities, and professional coaching.</li>
         </ul>
       </section>
+      <div className="carousel-section">
+          <Slider {...carouselSettings}>
+            <div>
+              <img src={VolleyBall1} alt="Slide 1" className="carousel-image" />
+            </div>
+            <div>
+              <img src={VolleyBall2} alt="Slide 2" className="carousel-image" />
+            </div>
+            <div>
+              <img src={VolleyBall3} alt="Slide 3" className="carousel-image" />
+            </div>
+            <div>
+              <img src={VolleyBall4} alt="Slide 4" className="carousel-image" />
+            </div>
+            <div>
+              <img src={VolleyBall5} alt="Slide 5" className="carousel-image" />
+            </div>
+          </Slider>
+        </div>
     </div>
   );
 };

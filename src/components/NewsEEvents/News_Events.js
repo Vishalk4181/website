@@ -1,7 +1,26 @@
 import React from 'react';
 import './News_Events.css';
+import Slider from 'react-slick';
+
+import News1 from '../../assets/images/News1.jpg'
+import News2 from '../../assets/images/News2.jpg'
+import News3 from '../../assets/images/News3.jpg'
+import News4 from '../../assets/images/News4.jpg'
+import News5 from '../../assets/images/News5.jpg'
+
+
 
 const News_Events = () => {
+  const carouselSettings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Loop through slides
+    speed: 500, // Transition speed in milliseconds
+    slidesToShow: 1, // Show one slide at a time
+    slidesToScroll: 1, // Scroll one slide at a time
+    autoplay: true, // Enable auto-play
+    autoplaySpeed: 3000, // Time in milliseconds between slides
+    arrows: true, // Enable navigation arrows
+  };
   return (
     <section className="news-events">
       <div className="container">
@@ -22,6 +41,25 @@ const News_Events = () => {
             date="June 2024" 
             content="In our commitment to environmental sustainability, we organized a Community Clean-Up Drive. Volunteers from across the region came together to clean up local parks and streets, significantly improving the area’s cleanliness and beauty..."
           />
+        </div>
+        <div className="carousel-section">
+          <Slider {...carouselSettings}>
+            <div>
+              <img src={News1} alt="Slide 1" className="carousel-image" />
+            </div>
+            <div>
+              <img src={News2} alt="Slide 2" className="carousel-image" />
+            </div>
+            <div>
+              <img src={News3} alt="Slide 3" className="carousel-image" />
+            </div>
+            <div>
+              <img src={News4} alt="Slide 4" className="carousel-image" />
+            </div>
+            <div>
+              <img src={News5} alt="Slide 5" className="carousel-image" />
+            </div>
+          </Slider>
         </div>
       </div>
     </section>

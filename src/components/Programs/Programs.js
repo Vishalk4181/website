@@ -36,8 +36,14 @@ const programsData = [
   {
     title: 'Tissue Culture Labs',
     description: 'Helping individuals overcome addiction through structured de-addiction and rehabilitation programs.',
-    icon: '🚭',
+    icon: '☘️',
     path: '/components/Programs/Pages/TissueCulture/tissueculture.js'
+  },
+  {
+    title: 'Gaushala',
+    description: 'A Gentle try to give Cows a Good life by serving them care. Doing Gau Sewa',
+    icon: '🐄',
+    path: '/components/Programs/Pages/Gaushala/gausahala.js'
   },
 ];
 
