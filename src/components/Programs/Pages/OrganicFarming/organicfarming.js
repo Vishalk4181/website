@@ -1,5 +1,5 @@
 import React from 'react';
-import './organicfarming.css';
+// import './organicfarming.css';
 import Slider from 'react-slick';
 
 import Organic1 from '../../../../assets/images/Organic1.jpg'

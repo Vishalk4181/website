@@ -27,34 +27,8 @@ h2 {
 }
 
 /* Address Section */
-.address-section {
-  margin-bottom: 40px;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.9); /* Light background with slight transparency */
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  animation: slideLeft 0.5s ease-out, pulse 2s infinite;
-}
-
-.address-section p {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  color: #555;
-}
-
-/* Additional Information */
-.additional-info {
-  margin-bottom: 40px;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.9); /* Light background with slight transparency */
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  animation: slideLeft 0.5s ease-out, pulse 2s infinite;
-}
-
-/* Course Inquiries */
+.address-section,
+.additional-info,
 .course-inquiries {
   margin-bottom: 40px;
   text-align: center;
@@ -62,10 +36,12 @@ h2 {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  animation: slideRight 0.5s ease-out, pulse 2s infinite;
+  animation: slideLeft 0.5s ease-out, pulse 2s infinite;
 }
 
+.address-section p,
 .course-inquiries p {
+  margin-bottom: 10px;
   font-size: 1.2rem;
   color: #555;
 }
@@ -158,17 +134,6 @@ h2 {
   }
 }
 
-@keyframes slideDown {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 @keyframes slideLeft {
   from {
     transform: translateX(-20px);
@@ -176,31 +141,6 @@ h2 {
   }
   to {
     transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideRight {
-  from {
-    transform: translateX(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
     opacity: 1;
   }
 }
@@ -217,12 +157,59 @@ h2 {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .heading h1 {
-    font-size: 2.5rem; /* Adjusted for smaller screens */
+    font-size: 2.5rem; /* Adjusted size for smaller screens */
+  }
+
+  h2 {
+    font-size: 2rem; /* Adjusted section title size */
   }
 
   .form-container {
-    padding: 20px; /* Reduced padding for smaller screens */
+    padding: 30px; /* Reduced padding for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .heading h1 {
+    font-size: 2rem; /* Adjusted size for tablet screens */
+  }
+
+  .form-container {
+    padding: 20px; /* Further reduced padding */
+  }
+
+  .address-section,
+  .additional-info,
+  .course-inquiries {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading h1 {
+    font-size: 1.8rem; /* Adjusted size for mobile screens */
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 8px; /* Reduced padding for inputs */
+  }
+
+  .form-group button {
+    padding: 10px;
+    font-size: 1rem; /* Smaller font size for buttons */
+  }
+
+  .address-section,
+  .additional-info,
+  .course-inquiries {
+    padding: 15px;
   }
 }

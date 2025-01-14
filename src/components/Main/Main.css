@@ -1,14 +1,12 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-
-a{
+a {
     text-decoration: none;
 }
 
-
 /* Reset and Box Sizing */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,7 +27,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 5vw;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -53,34 +51,28 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     z-index: -1;
 }
+
 /* Carousel */
 .carousel-container {
-    position: relative;
-    z-index: 1;
     width: 100%;
-    max-width: 1200px;
-}
-
-.carousel-image {
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures no overflow */
+  }
+  
+  .carousel-image {
     width: 100%;
-    height: auto;
-    max-height: 80vh;
-    object-fit: cover;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    animation: fadeIn 1s ease-in;
-}
-
-.carousel-image:hover {
-    transform: scale(1.05);
-    opacity: 0.8;
-}
-
-
-
-
+    height: 100%;
+    object-fit: contain; /* Ensures the entire image is visible without cropping */
+    border-radius: 10px; /* Optional for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional for styling */
+  }
+  
 
 /* Section Container */
 .section-container {
@@ -88,61 +80,61 @@ html, body {
     display: flex;
     align-items: center;
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 2vw;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     animation: fadeInUp 1s ease-out;
+    flex-wrap: wrap;
 }
 
 .section-container img {
-    max-height: 600px;
-    width: 30%;
+    max-height: 400px;
+    width: 100%;
+    max-width: 400px;
     border-radius: 10px;
-    margin-right: 70px;
+    margin: 0 auto 2vw;
     transition: transform 0.3s, opacity 0.3s;
 }
 
 .section-container img:hover {
-    transform: scale(1.05); /* Zoom effect on hover */
+    transform: scale(1.05);
     opacity: 0.9;
 }
 
 .section-content {
-    width: 60%;
-    text-align: left;
+    flex: 1;
+    padding: 2vw;
+    text-align: center;
 }
 
 .section-content h2 {
-    text-align: center;
-    font-size: 3.5rem; /* Larger font size for more impact */
-    margin-bottom: 50px;
-    color: #f57f17; /* Light saffron color */
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 2rem;
+    color: #f57f17;
     font-weight: 700;
     position: relative;
-    animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out; /* Bounce-in animation */
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5); /* Enhanced text shadow */
-    letter-spacing: 0px; /* Increased letter spacing */
+    animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5);
+    letter-spacing: 1px;
 }
 
 .section-content h2::after {
     content: '';
     display: block;
-    width: 400px; /* Wider underline for emphasis */
-    height: 8px;
-    background: linear-gradient(45deg, #fe851c, #6fbeff); /* Initial gradient */
-    margin: 15px auto 0;
-    margin-bottom: 30px;
-    margin-top: 15px;
+    width: 50%;
+    height: 5px;
+    background: linear-gradient(45deg, #fe851c, #6fbeff);
+    margin: 1rem auto;
     border-radius: 5px;
-    background-size: 200% 200%; /* Larger background to enable smooth animation */
-    animation: gradientMove 4s linear infinite; /* Continuous, smooth animation */
-  }
+    background-size: 200% 200%;
+    animation: gradientMove 4s linear infinite;
+}
 
 .section-content p {
-    font-size: 1.2em;
+    font-size: 1rem;
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     text-align: justify;
 }
 
@@ -150,44 +142,81 @@ html, body {
     font-weight: bold;
 }
 
-/* Custom Scrollbar for Course and Sustainable Sectors */
+/* Navigation Table */
+.navigation-table {
+    width: 80%; /* Reduced width */
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-table th,
+.navigation-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.navigation-table th {
+    background: #f57f17;
+    color: #fff;
+    font-weight: 700;
+}
+
+.navigation-table tr:hover {
+    background: #f5f5f5;
+}
+
+.navigation-table a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold; /* Make navigation topics bold */
+}
+
+.navigation-table a:hover {
+    text-decoration: underline;
+}
+
+/* Custom Scrollbar */
 .course-sector::-webkit-scrollbar,
 .sustainable-sector::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
+    width: 8px;
 }
 
 .course-sector::-webkit-scrollbar-track,
 .sustainable-sector::-webkit-scrollbar-track {
-    background: #e4e4e4; /* Background of the scrollbar track */
-    border-radius: 10px; /* Rounded corners for the track */
+    background: #e4e4e4;
+    border-radius: 10px;
 }
 
 .course-sector::-webkit-scrollbar-thumb,
 .sustainable-sector::-webkit-scrollbar-thumb {
-    background: linear-gradient(60deg, #79c0fe, #ffa200); /* Gradient color for the scrollbar thumb */
-    border-radius: 10px; /* Rounded corners for the thumb */
-    transition: background 0.3s ease-in-out; /* Smooth transition effect */
+    background: linear-gradient(60deg, #79c0fe, #ffa200);
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
 }
 
 .course-sector::-webkit-scrollbar-thumb:hover,
 .sustainable-sector::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(60deg, #ffa200, #79c0fe); /* Change color on hover for a modern effect */
+    background: linear-gradient(60deg, #ffa200, #79c0fe);
 }
 
 .course-sector,
 .sustainable-sector {
-    scrollbar-width: thin; /* Firefox scrollbar width */
-    scrollbar-color: #ffa200 #e4e4e4; /* Firefox thumb and track color */
+    scrollbar-width: thin;
+    scrollbar-color: #ffa200 #e4e4e4;
     overflow-y: auto;
 }
 
-/* Ensure smooth scrolling */
 .course-sector,
 .sustainable-sector {
     scroll-behavior: smooth;
 }
 
-/* Keyframes for Animations */
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -199,45 +228,7 @@ html, body {
     }
 }
 
-@keyframes slideUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-30px);
-    }
-    60% {
-        transform: translateY(-15px);
-    }
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.05);
-        opacity: 0.8;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes backgroundMove {
+@keyframes gradientMove {
     0% {
         background-position: 0% 0%;
     }
@@ -246,47 +237,46 @@ html, body {
     }
 }
 
-@keyframes backgroundShift {
-    0% {
-        background-position: 0% 0%;
+/* Media Queries */
+@media (max-width: 1024px) {
+    .section-content h2 {
+        font-size: 2.5rem;
     }
-    50% {
-        background-position: 100% 0%;
-    }
-    100% {
-        background-position: 0% 100%;
-    }
-}
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .section-container img {
+        max-height: 300px;
     }
 }
 
-/* Hide scrollbar for WebKit browsers */
-.course-sector::-webkit-scrollbar,
-.sustainable-sector::-webkit-scrollbar {
-    width: 0px; /* Hides the scrollbar */
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column;
+    }
+
+    .section-container img {
+        max-width: 80%;
+    }
+
+    .section-content {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .section-content p {
+        font-size: 0.9rem;
+    }
 }
 
-.course-sector::-webkit-scrollbar-track,
-.sustainable-sector::-webkit-scrollbar-track {
-    background: transparent; /* Hide the scrollbar track */
-}
+@media (max-width: 480px) {
+    .section-content h2 {
+        font-size: 1.8rem;
+    }
 
-.course-sector::-webkit-scrollbar-thumb,
-.sustainable-sector::-webkit-scrollbar-thumb {
-    background: transparent; /* Hide the scrollbar thumb */
-}
+    .section-content p {
+        font-size: 0.8rem;
+    }
 
-/* Hide scrollbar for Firefox */
-.course-sector,
-.sustainable-sector {
-    scrollbar-width: none; /* Hides the scrollbar in Firefox */
+    .section-container img {
+        width: 100%;
+    }
 }

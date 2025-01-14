@@ -4,7 +4,7 @@
   padding: 60px 20px;
   background: linear-gradient(to right, #f3e5ab, #e3f2fd);
   color: #333;
-  font-family: 'Poppins', sans-serif; /* Modern and clean font */
+  font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -19,7 +19,7 @@
   margin-bottom: 50px;
   color: #f57f17; /* Saffron color */
   font-weight: 700;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   position: relative;
   animation: fadeIn 1s ease-out;
 }
@@ -39,13 +39,8 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  animation: fadeIn 1s ease-out, slideIn 1s ease-in-out, pulse 2s infinite; /* Added pulse animation */
+  animation: fadeIn 1s ease-out, slideIn 1s ease-in-out, pulse 2s infinite;
   margin-bottom: 30px; /* Increased gap between cards */
-}
-
-.program-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .program-card:hover {
@@ -80,5 +75,68 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 2.8rem; /* Reduce title size for tablets */
+  }
+
+  .program-card {
+    padding: 20px; /* Adjust card padding for tablets */
+  }
+
+  .program-title {
+    font-size: 1.3rem; /* Slightly reduce title size */
+  }
+
+  .program-description {
+    font-size: 0.95rem; /* Reduce description size */
+  }
+}
+
+@media (max-width: 768px) {
+  .programs {
+    padding: 50px 15px;
+  }
+
+  .heading {
+    font-size: 2.5rem; /* Smaller title for smaller screens */
+  }
+
+  .program-card {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .program-title {
+    font-size: 1.2rem; /* Further reduce title size */
+  }
+
+  .program-description {
+    font-size: 0.9rem; /* Further reduce description size */
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2rem; /* Title size adjustment for mobile */
+  }
+
+  .program-card {
+    padding: 10px; /* Smallest padding for mobile */
+  }
+
+  .program-title {
+    font-size: 1.1rem; /* Smallest title for mobile */
+  }
+
+  .program-description {
+    font-size: 0.85rem; /* Smallest description size */
+  }
+
+  .program-icon {
+    font-size: 2.5rem; /* Smaller icons on mobile */
   }
 }

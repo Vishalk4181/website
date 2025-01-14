@@ -66,14 +66,6 @@ const gaushala = () => {
           </div>
         </div>
       </section>
-
-      <section className="get-involved-section">
-        <h2>Get Involved</h2>
-        <p>
-          Join us in supporting the welfare of cows and sustainable farming. Your contribution can make a difference in the lives of both the cows and the community.
-        </p>
-        <button className="donate-button">Donate Us</button>
-      </section>
     </div>
   );
 };

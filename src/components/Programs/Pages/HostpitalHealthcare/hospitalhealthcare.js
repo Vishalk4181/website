@@ -158,7 +158,12 @@ const HospitalHealthcare = () => {
           <li>Our hospital is committed to delivering high-quality healthcare with a focus on patient-centered care and community well-being.</li>
         </ul>
 
-        <div className="carousel-section">
+
+
+
+
+      </section>
+      <div className="carousel-section">
           <Slider {...carouselSettings}>
             <div>
               <img src={Hospital1} alt="Slide 1" className="carousel-image" />
@@ -177,10 +182,6 @@ const HospitalHealthcare = () => {
             </div>
           </Slider>
         </div>
-
-
-
-      </section>
     </div>
   );
 };

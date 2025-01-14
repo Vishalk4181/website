@@ -1,30 +1,32 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-
-
-
-.carousel-section {
-    margin-top: auto;
+.carousel-container {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures no overflow */
   }
   
   .carousel-image {
     width: 100%;
-    height: 10%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    object-fit: contain; /* Ensures the entire image is visible without cropping */
+    border-radius: 10px; /* Optional for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional for styling */
   }
-  
-  
-  .kabaddi-container {
+
+.kabaddi-container {
     padding: 60px 20px;
     background: linear-gradient(to right, #e3f2fd, #f3e5ab); /* Light blue to light yellow gradient */
     font-family: 'Poppins', sans-serif;
     color: #333;
     animation: fadeIn 1s ease-out;
-  }
-  
-  .kabaddi-heading {
+}
+
+.kabaddi-heading {
     text-align: center;
     font-size: 3.2rem;
     color: #f57f17; /* Saffron color */
@@ -34,100 +36,147 @@
     letter-spacing: 2px;
     position: relative;
     animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out;
-  }
-  
-  .kabaddi-heading::after {
+}
+
+.kabaddi-heading::after {
     content: '';
     display: block;
-    width: 400px;
+    width: 100%; /* Adjust width for responsiveness */
+    max-width: 400px;
     height: 8px;
     background: linear-gradient(45deg, #fe851c, #6fbeff);
     margin: 20px auto 0;
     border-radius: 5px;
     background-size: 200% 200%;
     animation: gradientMove 4s linear infinite;
-  }
-  
-  .kabaddi-section {
+}
+
+.kabaddi-section {
     background: #fff;
     border-radius: 15px;
     padding: 30px;
     margin: 40px auto; /* Centered horizontally */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease-out, slideUp 1s ease-in-out;
-    width: 75%; /* Set width to 75% */
-  }
-  
-  .kabaddi-section h2 {
+    width: 90%; /* Adjust for smaller screens */
+    max-width: 75%;
+}
+
+.kabaddi-section h2 {
     text-align: center;
     color: #f57f17; /* Saffron color */
     margin-bottom: 20px;
     font-size: 2rem;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .kabaddi-section h3 {
+}
+
+.kabaddi-section h3 {
     color: #f57f17;
     margin-bottom: 10px;
     font-size: 1.5rem;
     text-align: left;
     font-weight: 700;
-  }
-  
-  .kabaddi-section p {
+}
+
+.kabaddi-section p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-left: 20px;
     color: #333;
-  }
-  
-  .kabaddi-section ul {
+}
+
+.kabaddi-section ul {
     list-style-type: disc;
     margin-left: 40px;
-  }
-  
-  /* Animations */
-  @keyframes fadeIn {
+}
+
+/* Animations */
+@keyframes fadeIn {
     from {
-      opacity: 0;
-      transform: translateY(10px);
+        opacity: 0;
+        transform: translateY(10px);
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
-  @keyframes slideUp {
+}
+
+@keyframes slideUp {
     from {
-      transform: translateY(20px);
-      opacity: 0;
+        transform: translateY(20px);
+        opacity: 0;
     }
     to {
-      transform: translateY(0);
-      opacity: 1;
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
-  
-  @keyframes bounceIn {
+}
+
+@keyframes bounceIn {
     0% {
-      transform: scale(0.8);
-      opacity: 0;
+        transform: scale(0.8);
+        opacity: 0;
     }
     50% {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
     100% {
-      transform: scale(1);
-      opacity: 1;
+        transform: scale(1);
+        opacity: 1;
     }
-  }
-  
-  @keyframes gradientMove {
+}
+
+@keyframes gradientMove {
     0% {
-      background-position: 0% 0%;
+        background-position: 0% 0%;
     }
     100% {
-      background-position: 100% 100%;
+        background-position: 100% 100%;
     }
-  }  
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .kabaddi-heading {
+        font-size: 2.8rem;
+    }
+
+    .kabaddi-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .kabaddi-heading {
+        font-size: 2.5rem;
+    }
+
+    .kabaddi-section {
+        width: 95%; /* Expand width for smaller screens */
+    }
+
+    .kabaddi-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .kabaddi-heading {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .kabaddi-section {
+        padding: 15px;
+    }
+
+    .kabaddi-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .kabaddi-section p,
+    .kabaddi-section h3 {
+        font-size: 1rem;
+    }
+}

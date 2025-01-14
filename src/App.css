@@ -1,11 +1,11 @@
+/* App Layout */
 .App {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensure App takes up full viewport height */
-} 
+}
 
-
-
+/* App Logo */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -17,6 +17,7 @@
   }
 }
 
+/* App Header */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -26,17 +27,54 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px; /* Add padding to ensure spacing on smaller screens */
 }
 
+/* App Link */
 .App-link {
   color: #61dafb;
 }
 
+/* Keyframe Animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .App-header {
+    font-size: calc(12px + 2vmin); /* Adjust font size */
+    padding: 40px 20px; /* Adjust padding for larger screens */
+  }
+
+  .App-logo {
+    height: 30vmin; /* Reduce logo size on larger tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(14px + 2vmin); /* Slightly larger font size for tablets */
+    padding: 30px 15px; /* Adjust padding for tablet screens */
+  }
+
+  .App-logo {
+    height: 25vmin; /* Further reduce logo size on smaller tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    font-size: calc(16px + 2vmin); /* Larger font size on mobile devices */
+    padding: 20px 10px; /* Adjust padding for small mobile screens */
+  }
+
+  .App-logo {
+    height: 20vmin; /* Reduce logo size on small mobile devices */
   }
 }

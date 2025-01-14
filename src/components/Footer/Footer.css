@@ -9,8 +9,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: background 0.5s ease, box-shadow 0.5s ease;
-}
+    transition: background 0.5s ease, box-shadow 0.5s ease;}
 
 /* Footer Container */
 .footer .container {
@@ -21,6 +20,7 @@
     margin: 0 auto;
     padding: 0 20px;
     animation: fadeInUp 1.5s ease-in-out;
+    text-align: center;
 }
 
 /* Footer Logo */
@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     animation: bounceIn 1s ease-in-out;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .footer .footer-logo h2 {
-    font-size: 1.5em;
+    font-size: clamp(1.2em, 3vw, 1.5em);
     margin: 0;
     color: #f39c12;
     animation: fadeInUp 1s ease-in-out;
@@ -51,7 +51,7 @@
 
 /* Footer Description */
 .footer .footer-description {
-    font-size: 0.9em; 
+    font-size: clamp(0.8em, 2vw, 1em);
     margin-top: 5px;
     margin-bottom: 20px;
     max-width: 800px;
@@ -70,15 +70,15 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     animation: fadeInUp 1.5s ease-in-out;
 }
 
 .footer .footer-links a {
     color: #ecf0f1;
-    margin: 0 10px;
+    margin: 5px 10px;
     text-decoration: none;
-    font-size: 0.9em;
+    font-size: clamp(0.8em, 2vw, 1em);
     transition: color 0.3s, transform 0.3s;
     position: relative;
     animation: linkFadeIn 2s ease-in-out;
@@ -107,7 +107,7 @@
 
 /* Footer Bottom */
 .footer .footer-bottom {
-    font-size: 0.8em;
+    font-size: clamp(0.7em, 1.5vw, 0.9em);
     border-top: 1px solid #7f8c8d;
     padding-top: 10px;
     margin-top: 10px;
@@ -172,4 +172,59 @@
 
 .footer .footer-bottom {
     animation-delay: 1.5s;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .footer .container {
+        padding: 0 15px;
+    }
+
+    .footer .footer-logo h2 {
+        font-size: 1.2em;
+    }
+
+    .footer .footer-description {
+        font-size: 0.9em;
+    }
+
+    .footer .footer-links a {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer .container {
+        padding: 0 10px;
+    }
+
+    .footer .footer-logo img {
+        height: 40px;
+    }
+
+    .footer .footer-links a {
+        margin: 5px;
+    }
+
+    .footer .footer-bottom {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px 15px;
+    }
+
+    .footer .footer-logo img {
+        height: 30px;
+    }
+
+    .footer .footer-links a {
+        font-size: 0.8em;
+    }
+
+    .footer .footer-bottom {
+        font-size: 0.7em;
+    }
 }

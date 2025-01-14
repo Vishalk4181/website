@@ -24,7 +24,8 @@
 .athletics-heading::after {
     content: '';
     display: block;
-    width: 400px;
+    width: 100%; /* Adjust width for responsiveness */
+    max-width: 400px;
     height: 8px;
     background: linear-gradient(45deg, #fe851c, #6fbeff);
     margin: 20px auto 0;
@@ -37,15 +38,16 @@
     background: #fff;
     border-radius: 15px;
     padding: 30px;
-    margin: 40px auto; /* Centered horizontally */
+    margin: 40px auto;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease-out, slideUp 1s ease-in-out;
-    width: 75%; /* Set width to 75% */
+    width: 90%; /* Adjust for smaller screens */
+    max-width: 75%;
 }
 
 .athletics-section h2 {
     text-align: center;
-    color: #f57f17; /* Saffron color */
+    color: #f57f17;
     margin-bottom: 20px;
     font-size: 2rem;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
@@ -71,17 +73,22 @@
     margin-left: 40px;
 }
 
-.carousel-section {
-    margin-top: auto;
+.carousel-container {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures no overflow */
   }
   
   .carousel-image {
     width: 100%;
-    height: 10%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    object-fit: contain; /* Ensures the entire image is visible without cropping */
+    border-radius: 10px; /* Optional for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional for styling */
   }
-
 
 /* Animations */
 @keyframes fadeIn {
@@ -126,5 +133,49 @@
     }
     100% {
         background-position: 100% 100%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .athletics-heading {
+        font-size: 2.8rem;
+    }
+
+    .athletics-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .athletics-heading {
+        font-size: 2.5rem;
+    }
+
+    .athletics-section {
+        width: 95%; /* Expand width for smaller screens */
+    }
+
+    .athletics-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .athletics-heading {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .athletics-section {
+        padding: 15px;
+    }
+
+    .athletics-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .athletics-section p, .athletics-section h3 {
+        font-size: 1rem;
     }
 }

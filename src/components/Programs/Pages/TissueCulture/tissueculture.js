@@ -73,14 +73,6 @@ const tissueculture = () => {
           </div>
         </div>
       </section>
-
-      <section className="get-involved-section">
-        <h2>Get Involved</h2>
-        <p>
-          Join us in transforming agriculture. Whether you're a farmer, researcher, or supporter, there's a role for everyone in our journey towards sustainable farming.
-        </p>
-        <button className="contact-button">Contact Us</button>
-      </section>
     </div>
   );
 };

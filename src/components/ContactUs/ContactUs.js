@@ -1,5 +1,5 @@
-import React from 'react';
-import './ContactUs.css';
+import React from "react";
+import "../ContactUs/Contactus.css";
 
 const ContactUs = () => {
   return (
@@ -12,9 +12,16 @@ const ContactUs = () => {
       {/* Address Section */}
       <div className="address-section">
         <h2>Our Address</h2>
-        <p>69TH KM stone, Delhi-Ambala highway, Village Pattikayana, Samalkha, Panipat, Haryana, 132103</p>
-        <p><strong>Email: shrimadhavjansewa@gmail.com</strong></p>
-        <p><strong>Phone: +91 99913 75451</strong></p>
+        <p>
+          69TH KM stone, Delhi-Ambala highway, Village Pattikayana, Samalkha,
+          Panipat, Haryana, 132103
+        </p>
+        <p>
+          <strong>Email: shrimadhavjansewa@gmail.com</strong>
+        </p>
+        <p>
+          <strong>Phone: +91 99913 75451</strong>
+        </p>
       </div>
 
       {/* Additional Information */}
@@ -27,7 +34,10 @@ const ContactUs = () => {
       {/* Course Inquiries */}
       <div className="course-inquiries">
         <h2>Course Inquiries</h2>
-        <p>For any questions related to our courses, please fill out the form below, and we’ll get back to you as soon as possible.</p>
+        <p>
+          For any questions related to our courses, please fill out the form
+          below, and we’ll get back to you as soon as possible.
+        </p>
       </div>
 
       {/* Contact Form Container */}

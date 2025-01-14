@@ -4,10 +4,10 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .about-us {
-  padding: 60px 20px;
+  padding: 5% 10%; /* Adjusted for responsiveness */
   background: linear-gradient(to right, #f3e5ab, #e3f2fd); /* Light yellow to light blue gradient */
   color: #333;
-  font-family: 'Lora', serif; /* Updated font */
+  font-family: 'Lora', serif;
   position: relative;
   overflow: hidden;
 }
@@ -15,78 +15,82 @@
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 2%; /* Adjusted for smaller screens */
 }
 
 .heading {
   text-align: center;
-  font-size: 3.2rem; /* Larger font size for more impact */
-  margin-bottom: 60px;
-  color: #f57f17; /* Light saffron color */
+  font-size: 2.5rem; /* Adjusted for better scaling */
+  margin-bottom: 40px;
+  color: #f57f17;
   font-weight: 900;
   position: relative;
-  animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out; /* Bounce-in animation */
-  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5); /* Enhanced text shadow */
-  letter-spacing: 2px; /* Increased letter spacing */
+  animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5);
+  letter-spacing: 2px;
 }
 
 .heading::after {
   content: '';
   display: block;
-  width: 400px; /* Wider underline for emphasis */
-  height: 8px;
-  background: linear-gradient(45deg, #fe851c, #6fbeff); /* Initial gradient */
-  margin: 20px auto 0;
+  width: 60%; /* Scaled width for smaller screens */
+  height: 5px; /* Slightly thinner underline */
+  background: linear-gradient(45deg, #fe851c, #6fbeff);
+  margin: 15px auto 0;
   border-radius: 5px;
-  background-size: 200% 200%; /* Larger background to enable smooth animation */
-  animation: gradientMove 4s linear infinite; /* Continuous, smooth animation */
+  background-size: 200% 200%;
+  animation: gradientMove 4s linear infinite;
 }
 
 .intro-paragraph {
-  font-family: 'Poppins', sans-serif; /* Modern and clean font */
-  font-size: 1.3rem; /* Slightly larger font for better readability */
-  line-height: 1.8; /* Increased line-height for readability */
-  color: #333; /* Darker color for better contrast */
-  margin-bottom: 40px; /* More space below the paragraph */
-  padding: 30px 40px; /* Increased padding for a more spacious feel */
-  background: linear-gradient(to right, #f3e5ab, #e3f2fd); /* Gradient background for visual appeal */
-  border-top: 8px solid #f57f17; /* Thicker saffron colored top border */
-  border-bottom: 8px solid #f57f17; /* Thicker saffron colored bottom border */
-  border-radius: 15px; /* More rounded corners */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.05); /* Enhanced shadow for depth */
-  width: 100%; /* Full width of the container */
-  animation: fadeIn 1s ease-out, slideIn 1s ease-in-out, pulse 2s infinite; /* Added pulse animation */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem; /* Slightly reduced for better readability on smaller devices */
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 30px;
+  padding: 2rem 5%;
+  background: linear-gradient(to right, #f3e5ab, #e3f2fd);
+  border-top: 6px solid #f57f17; /* Thinner border */
+  border-bottom: 6px solid #f57f17;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 1s ease-out, slideIn 1s ease-in-out, pulse 2s infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .intro-paragraph:hover {
-  transform: translateY(-5px); /* Slight upward movement on hover */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-  background: linear-gradient(to right, #e3f2fd, #f3e5ab); /* Reverse gradient on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #e3f2fd, #f3e5ab);
 }
 
 .about-image {
-  max-width: 100%; /* Ensures images do not overflow */
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  margin-bottom: 20px; /* Space between images */
-
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
-
-.carousel-section {
-  margin-top: auto;
+.carousel-container {
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensures no overflow */
 }
 
 .carousel-image {
   width: 100%;
-  height: 10%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  object-fit: contain; /* Ensures the entire image is visible without cropping */
+  border-radius: 10px; /* Optional for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional for styling */
 }
 
 
 
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -125,35 +129,62 @@
 
 @keyframes gradientMove {
   0% {
-    background-position: 0% 0%; /* Start with saffron on the left */
+    background-position: 0% 0%;
   }
   50% {
-    background-position: 100% 0%; /* Move saffron to the right, blue to the left */
+    background-position: 100% 0%;
   }
   100% {
-    background-position: 0% 0%; /* Reverse the animation: saffron goes left, blue goes right */
+    background-position: 0% 0%;
   }
 }
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(245, 127, 23, 0.7); /* Saffron color */
+    box-shadow: 0 0 0 0 rgba(245, 127, 23, 0.7);
   }
   50% {
-    box-shadow: 0 0 0 20px rgba(245, 127, 23, 0); /* Expand and fade out */
+    box-shadow: 0 0 0 20px rgba(245, 127, 23, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(245, 127, 23, 0); /* Reset */
+    box-shadow: 0 0 0 0 rgba(245, 127, 23, 0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .intro-paragraph {
+    font-size: 0.9rem;
+    padding: 1.5rem 4%;
   }
 }
 
 @media (max-width: 768px) {
+  .about-us {
+    padding: 5% 8%;
+  }
+
   .heading {
-    font-size: 2rem; /* Adjusted for smaller screens */
+    font-size: 1.8rem;
   }
 
   .intro-paragraph {
-    font-size: 1.1rem; /* Slightly smaller font */
-    padding: 20px 30px; /* Adjusted padding */
+    font-size: 0.85rem;
+    padding: 1.5rem 3%;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .intro-paragraph {
+    font-size: 0.8rem;
+    padding: 1rem 2%;
   }
 }
