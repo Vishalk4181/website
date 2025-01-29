@@ -3,24 +3,24 @@
 
 .carousel-container {
     width: 100%;
-    height: 400px; /* Adjust height as needed */
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Ensures no overflow */
-  }
-  
-  .carousel-image {
+    overflow: hidden;
+}
+
+.carousel-image {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensures the entire image is visible without cropping */
-    border-radius: 10px; /* Optional for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional for styling */
-  }
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 .volleyball-container {
     padding: 60px 20px;
-    background: linear-gradient(to right, #e3f2fd, #f3e5ab); /* Light blue to light yellow gradient */
+    background: linear-gradient(to right, #e3f2fd, #f3e5ab);
     font-family: 'Poppins', sans-serif;
     color: #333;
     animation: fadeIn 1s ease-out;
@@ -29,7 +29,7 @@
 .volleyball-heading {
     text-align: center;
     font-size: 3.2rem;
-    color: #f57f17; /* Saffron color */
+    color: #f57f17; 
     font-weight: 700;
     margin-bottom: 60px;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5);
@@ -41,7 +41,7 @@
 .volleyball-heading::after {
     content: '';
     display: block;
-    width: 100%; /* Adjust width for responsiveness */
+    width: 100%;
     max-width: 400px;
     height: 8px;
     background: linear-gradient(45deg, #fe851c, #6fbeff);
@@ -55,16 +55,16 @@
     background: #fff;
     border-radius: 15px;
     padding: 30px;
-    margin: 40px auto; /* Centered horizontally */
+    margin: 40px auto;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease-out, slideUp 1s ease-in-out;
-    width: 90%; /* Adjust for smaller screens */
+    width: 90%;
     max-width: 75%;
 }
 
 .volleyball-section h2 {
     text-align: center;
-    color: #f57f17; /* Saffron color */
+    color: #f57f17;
     margin-bottom: 20px;
     font-size: 2rem;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
@@ -144,6 +144,15 @@
 
     .volleyball-section {
         padding: 20px;
+        width: 90%;
+    }
+
+    .volleyball-section h2 {
+        font-size: 1.9rem;
+    }
+
+    .carousel-container {
+        height: 350px;
     }
 }
 
@@ -153,11 +162,16 @@
     }
 
     .volleyball-section {
-        width: 95%; /* Expand width for smaller screens */
+        width: 90%;
+        padding: 15px;
     }
 
     .volleyball-section h2 {
         font-size: 1.8rem;
+    }
+
+    .carousel-container {
+        height: 300px;
     }
 }
 
@@ -168,7 +182,8 @@
     }
 
     .volleyball-section {
-        padding: 15px;
+        padding: 10px;
+        width: 95%;
     }
 
     .volleyball-section h2 {
@@ -178,5 +193,9 @@
     .volleyball-section p,
     .volleyball-section h3 {
         font-size: 1rem;
+    }
+
+    .carousel-container {
+        height: 250px;
     }
 }

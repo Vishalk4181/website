@@ -1,6 +1,32 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+
+.carousel-container {
+    width: 90%; /* Match the width of the hospital-section */
+    height: auto; /* Auto height to maintain aspect ratio */
+    max-height: 200px; /* Ensure it doesn't take up too much vertical space */
+    margin: 20px auto; /* Centered with top and bottom margin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #fff; /* Match the hospital-section background */
+    border-radius: 15px; /* Match the styling of hospital-section */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+    animation: fadeIn 1s ease-out, slideUp 1s ease-in-out;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure the image fits properly without cropping */
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for the image */
+}
+
+
+
 .tissue-culture-page {
     padding: 60px 20px;
     background: linear-gradient(to right, #e3f2fd, #f3e5ab);
@@ -105,7 +131,6 @@ h2 {
     font-size: 1.1rem;
 }
 
-
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -153,27 +178,35 @@ h2 {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
     .title {
-        font-size: 2.8rem; /* Reduce title size for tablets */
+        font-size: 2.9rem; /* Slightly smaller font size for medium-large screens */
     }
 
     .title::after {
-        width: 250px; /* Narrow underline for smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .tissue-culture-page {
-        padding: 40px 15px;
-    }
-
-    .title {
-        font-size: 2.5rem;
+        width: 250px; /* Adjust underline for medium screens */
     }
 
     h2 {
         font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .tissue-culture-page {
+        padding: 50px 15px; /* Adjust padding for tablets */
+    }
+
+    .title {
+        font-size: 2.7rem; /* Reduce title size */
+    }
+
+    .title::after {
+        width: 240px; /* Narrow underline for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.6rem; /* Slightly smaller heading */
     }
 
     .benefits-list {
@@ -194,14 +227,21 @@ h2 {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+    .tissue-culture-page {
+        padding: 40px 15px;
+    }
+
     .title {
-        font-size: 2rem;
-        letter-spacing: 1px;
+        font-size: 2.5rem; /* Smaller font for tablets and smaller devices */
     }
 
     .title::after {
-        width: 200px;
+        width: 200px; /* Smaller underline */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller heading */
     }
 
     .intro-section, 
@@ -209,19 +249,81 @@ h2 {
     .impact-section, 
     .process-section, 
     .get-involved-section {
-        padding: 20px;
-    }
-
-    h2 {
-        font-size: 1.6rem;
+        padding: 20px; /* Adjust padding */
     }
 
     .benefits-list {
         font-size: 0.9rem;
     }
 
+    .process-steps {
+        flex-direction: column;
+        gap: 10px; /* Reduce gap */
+    }
+
+    .step h3 {
+        font-size: 1.2rem; /* Smaller step titles */
+    }
+
+    .step p {
+        font-size: 0.9rem; /* Smaller step content */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+        letter-spacing: 1px; /* Adjust letter-spacing */
+    }
+
+    .title::after {
+        width: 180px; /* Further reduced underline width */
+    }
+
+    .tissue-culture-page {
+        padding: 30px 10px; /* Minimum padding */
+    }
+
+    h2 {
+        font-size: 1.4rem; /* Reduce heading size */
+    }
+
+    .benefits-list {
+        font-size: 0.8rem; /* Even smaller font size for mobile */
+    }
+
+    .process-steps {
+        gap: 8px; /* Even smaller gap */
+    }
+
+    .step h3 {
+        font-size: 1rem; /* Further reduce step titles */
+    }
+
+    .step p {
+        font-size: 0.8rem; /* Further reduce step content */
+    }
+
     .contact-button {
         font-size: 1rem;
-        padding: 10px 20px;
+        padding: 10px 20px; /* Standard button padding */
+    }
+}
+
+@media (max-width: 375px) {
+    .title {
+        font-size: 1.8rem; /* Extra small screens */
+    }
+
+    .title::after {
+        width: 150px; /* Further reduced underline for very small screens */
+    }
+
+    .step h3 {
+        font-size: 1rem;
+    }
+
+    .step p {
+        font-size: 0.8rem;
     }
 }

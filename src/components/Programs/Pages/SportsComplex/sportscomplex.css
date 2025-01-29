@@ -80,6 +80,17 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1280px) {
+  .sports-grid {
+      grid-template-columns: repeat(3, 1fr); /* Keep 3 columns for medium-large screens */
+      gap: 25px;
+  }
+
+  .sports-complex .heading {
+      font-size: 2.9rem; /* Slightly smaller font size */
+  }
+}
+
 @media (max-width: 1024px) {
   .sports-grid {
       grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
@@ -87,7 +98,7 @@
   }
 
   .sports-complex .heading {
-      font-size: 2.8rem; /* Reduce font size for tablets */
+      font-size: 2.7rem; /* Reduce font size for tablets */
   }
 }
 
@@ -133,5 +144,31 @@
 
   .sport-title {
       font-size: 1.2rem; /* Reduce title font size */
+  }
+
+  .sports-complex {
+      padding: 30px 10px; /* Reduce padding for smaller screens */
+  }
+}
+
+@media (max-width: 375px) {
+  .sports-complex .heading {
+      font-size: 1.8rem; /* Even smaller font size */
+  }
+
+  .sport-card {
+      padding: 8px; /* Further reduce padding */
+  }
+
+  .sport-icon {
+      font-size: 1.8rem; /* Smaller icons for extra small screens */
+  }
+
+  .sport-title {
+      font-size: 1.1rem; /* Further reduce title font size */
+  }
+
+  .sports-complex {
+      padding: 20px 5px; /* Minimum padding */
   }
 }

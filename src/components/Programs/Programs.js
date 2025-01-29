@@ -22,10 +22,10 @@ const programsData = [
     path: '/components/Programs/pages/SportsComplex/sportscomplex.js'
   },
   {
-    title: 'Yoga and Meditation Center',
+    title: 'Wellness Center',
     description: 'Promoting physical and mental well-being through yoga and meditation classes for all age groups.',
     icon: '🧘‍♂️',
-    path: '/components/Programs/Pages/YogaMeditaion/yogameditaion.js'
+    path: '/components/Programs/Pages/WellnessCenter/WellnessCenter.js'
   },
   {
     title: 'Organic Farming',

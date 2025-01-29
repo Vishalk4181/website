@@ -14,12 +14,11 @@ import DonateUs from './components/DonateUs/Donate.js';
 
 
 
-
 //programs
 
 import HospitalHealthcare from './components/Programs/Pages/HostpitalHealthcare/hospitalhealthcare.js';
 import SkillDevelopment from './components/Programs/Pages/SkillDevelopment/skilldevelopment.js';
-import YogaMeditaion from './components/Programs/Pages/YogaMeditaion/yogameditaion.js';
+import WellnessCenter from './components/Programs/Pages/WellnessCenter/WellnessCenter.js';
 import SportsComplex from './components/Programs/Pages/SportsComplex/sportscomplex.js';
 import OrganicFarming from './components/Programs/Pages/OrganicFarming/organicfarming.js';
 import TissueCulture from './components/Programs/Pages/TissueCulture/tissueculture.js';
@@ -69,11 +68,10 @@ function App() {
 
 
 
-
         <Route path="/" element={<Programs />} />
         <Route path="/components/Programs/Pages/HostpitalHealthcare/hospitalhealthcare.js" element={<HospitalHealthcare />} />
         <Route path="/components/Programs/Pages/SkillDevelopment/skilldevelopment.js" element={<SkillDevelopment />} />
-        <Route path="/components/Programs/Pages/YogaMeditaion/yogameditaion.js" element={<YogaMeditaion />} />
+        <Route path="/components/Programs/Pages/WellnessCenter/WellnessCenter.js" element={<WellnessCenter />} />
         <Route path="/components/Programs/pages/SportsComplex/sportscomplex.js" element={<SportsComplex />} />
         <Route path="/components/Programs/Pages/OrganicFarming/organicfarming.js" element={<OrganicFarming />} />
         <Route path="/components/Programs/Pages/TissueCulture/tissueculture.js" element={<TissueCulture />} />

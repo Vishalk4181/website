@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../NavBar/NavBar.css';
 import logo from '../../assets/images/logo.png';
 
 const NavBar = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <header className="navbar">
             <div className="logo-container">
@@ -11,24 +17,34 @@ const NavBar = () => {
                     <img src={logo} alt="Shri Madhav Jan Sewa Nyas" className="logo" />
                 </Link>
                 <div className="text-container">
+                
                     <h1>Shri Madhav Jan Sewa Nyas</h1>
-                    <p>Center Of Education, Skills & Career Advancement (CESCA)</p>
+                    <p> Sewa Sadhana & Jan Vikas Kendra (S.S.K)</p>
                 </div>
+                <button
+                    className={`hamburger ${menuOpen ? 'open' : ''}`}
+                    onClick={toggleMenu}
+                    aria-label="Toggle navigation menu"
+                >
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                </button>
             </div>
-            <nav>
+            <nav className={`nav-links ${menuOpen ? 'active' : ''}`}>
                 <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About Us</Link></li>
-                    <li><Link to="/programs">Programs</Link></li>
-                    <li><Link to="/stories">Stories</Link></li>
-                    <li><Link to="/news_events">News & Events</Link></li>   
-                    <li><Link to="/getinvolved">Get Involved</Link></li>
-                    <li><Link to="/contactus">Contact Us</Link></li>
-                    <li><Link to="/donateus">Donate Us</Link></li>
+                    <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
+                    <li><Link to="/about" onClick={toggleMenu}>About Us</Link></li>
+                    <li><Link to="/programs" onClick={toggleMenu}>Programs</Link></li>
+                    <li><Link to="/stories" onClick={toggleMenu}>Stories</Link></li>
+                    <li><Link to="/news_events" onClick={toggleMenu}>News & Events</Link></li>
+                    <li><Link to="/getinvolved" onClick={toggleMenu}>Get Involved</Link></li>
+                    <li><Link to="/contactus" onClick={toggleMenu}>Contact Us</Link></li>
+                    {/* <li><Link to="/donateus" onClick={toggleMenu}>Donate Us</Link></li> */}
                 </ul>
             </nav>
         </header>
     );
-}
+};
 
 export default NavBar;

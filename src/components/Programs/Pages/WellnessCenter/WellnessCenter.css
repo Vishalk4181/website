@@ -1,0 +1,255 @@
+.wellness-center-page {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 3.2rem;
+    color: #ff9800; /* Saffron color */
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(255, 152, 0, 0.5);
+    letter-spacing: 1.5px;
+    position: relative;
+    animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 300px;
+    height: 6px;
+    background: linear-gradient(90deg, #ff9800, #2196f3);
+    margin: 20px auto 0;
+    border-radius: 3px;
+    background-size: 200% 200%;
+    animation: gradientMove 4s linear infinite;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Section Containers */
+.intro-section, 
+.benefits-section, 
+.impact-section, 
+.process-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out, slideUp 1s ease-in-out;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 2rem;
+    color: #ff9800; /* Saffron color */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Benefits List */
+.benefits-list {
+    list-style-type: disc;
+    margin-left: 40px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.benefits-list li {
+    margin-bottom: 10px;
+}
+
+/* Process Steps */
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.step h3 {
+    color: #ff9800;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1440px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .title::after {
+        width: 280px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .wellness-center-page {
+        padding: 50px 15px;
+    }
+
+    .title {
+        font-size: 2.8rem;
+    }
+
+    .title::after {
+        width: 250px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .wellness-center-page {
+        padding: 40px 10px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .benefits-list {
+        margin-left: 20px;
+        font-size: 1rem;
+    }
+
+    .process-steps {
+        gap: 15px;
+    }
+
+    .step h3 {
+        font-size: 1.4rem;
+    }
+
+    .step p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wellness-center-page {
+        padding: 30px 10px;
+    }
+
+    .title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .title::after {
+        width: 200px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .benefits-list {
+        font-size: 0.9rem;
+    }
+
+    .intro-section, 
+    .benefits-section, 
+    .impact-section, 
+    .process-section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .title::after {
+        width: 180px;
+    }
+
+    .intro-section, 
+    .benefits-section, 
+    .impact-section, 
+    .process-section {
+        padding: 10px;
+    }
+}

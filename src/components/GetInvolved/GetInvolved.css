@@ -1,6 +1,7 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+/* Carousel Container */
 .carousel-container {
   width: 100%;
   height: 400px; /* Adjust height as needed */
@@ -18,7 +19,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional for styling */
 }
 
-
+/* Get Involved Section */
 .get-involved {
   padding: 60px 20px;
   background: linear-gradient(to right, #f3e5ab, #e3f2fd); /* Light yellow to light blue gradient */
@@ -142,6 +143,32 @@
 }
 
 /* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .get-involved-heading {
+    font-size: 2.8rem;
+  }
+
+  .get-involved-heading::after {
+    height: 5px;
+  }
+
+  .get-involved-content {
+    font-size: 1rem;
+  }
+
+  .get-involved-option {
+    padding: 20px;
+  }
+
+  .get-involved-option h3 {
+    font-size: 1.2rem;
+  }
+
+  .get-involved-option p {
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 768px) {
   .get-involved-heading {
     font-size: 2.5rem;
@@ -166,6 +193,10 @@
   .get-involved-option p {
     font-size: 0.9rem;
   }
+
+  .get-involved-options {
+    gap: 15px; /* Reduced gap for smaller devices */
+  }
 }
 
 @media (max-width: 480px) {
@@ -187,5 +218,35 @@
 
   .get-involved-option p {
     font-size: 0.8rem;
+  }
+
+  .get-involved-options {
+    gap: 10px; /* Even smaller gap on very small screens */
+  }
+}
+
+@media (max-width: 360px) {
+  .get-involved-heading {
+    font-size: 1.8rem;
+  }
+
+  .get-involved-content {
+    font-size: 0.75rem;
+  }
+
+  .get-involved-option {
+    padding: 12px;
+  }
+
+  .get-involved-option h3 {
+    font-size: 0.9rem;
+  }
+
+  .get-involved-option p {
+    font-size: 0.7rem;
+  }
+
+  .get-involved-options {
+    gap: 8px; /* Tightened gap */
   }
 }

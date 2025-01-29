@@ -180,10 +180,10 @@ const SkillDevelopmentCenter = () => {
       formDataObj.append("message", formData.message);
   
       // Append the photo file if it exists
-      if (formData.photo) {
-        console.log("Photo details:", formData.photo);
-        formDataObj.append("photo", formData.photo);
-      }
+      // if (formData.photo) {
+      //   console.log("Photo details:", formData.photo);
+      //   formDataObj.append("photo", formData.photo);
+      // }
   
       // Debugging: Log FormData entries
       for (const [key, value] of formDataObj.entries()) {
@@ -213,7 +213,7 @@ const SkillDevelopmentCenter = () => {
           nearestPoliceStation: "",
           course: "",
           message: "",
-          photo: null,
+          // photo: null,
         });
       } else {
         console.error("Form submission failed", response.statusText);
@@ -546,7 +546,7 @@ const SkillDevelopmentCenter = () => {
                 value={formData.message}
                 onChange={handleInputChange}></textarea>
             </div>
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="photo">Upload Photo<span className="required">*</span></label>
               <input
                 type="file"
@@ -564,7 +564,7 @@ const SkillDevelopmentCenter = () => {
                   </button>
                 </div>
               )}
-            </div>
+            </div> */}
             <button type="submit">Submit</button>
           </form>
         </div>

@@ -2,15 +2,7 @@
 @import "~slick-carousel/slick/slick-theme.css";
 /* organicfarming.css */
 
-.organic-farming-container {
-    padding: 40px 15px;
-    background: linear-gradient(to right, #e3f2fd, #f3e5ab);
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    animation: fadeIn 1s ease-out;
-    margin: 0 auto; /* Center the container */
-}
-
+/* Main Heading */
 .organic-farming-heading {
     text-align: center;
     font-size: 3rem;
@@ -35,7 +27,9 @@
     animation: gradientMove 4s linear infinite;
 }
 
-.organic-farming-section {
+/* Sections */
+.organic-farming-section,
+.vegetable-section {
     background: #fff;
     border-radius: 15px;
     padding: 20px;
@@ -45,12 +39,18 @@
     width: 90%; /* Default width for smaller screens */
 }
 
-.organic-farming-section h2 {
-    text-align: center;
+.organic-farming-section h2,
+.vegetable-section h3 {
     color: #f57f17;
     margin-bottom: 15px;
     font-size: 1.8rem;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.vegetable-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
 }
 
 .what-we-farm-heading {
@@ -63,45 +63,25 @@
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-.vegetable-section {
-    background: #fff;
-    border-radius: 15px;
-    padding: 15px;
-    margin: 15px auto;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    width: 90%; /* Default width for smaller screens */
-}
-
-.vegetable-section h3 {
-    color: #f57f17;
-    margin-bottom: 8px;
-    font-size: 1.4rem;
-    text-align: left;
-    font-weight: 700;
-}
-
-.vegetable-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333;
-}
-
+/* Carousel */
 .carousel-container {
     width: 100%;
-    height: 400px; /* Adjust height as needed */
+    height: 100%; /* Adjust height as needed */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden; /* Ensures no overflow */
-  }
-  
-  .carousel-image {
-    width: 100%;
-    height: 100%;
+}
+
+.carousel-image {
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Ensure height is explicitly set */
     object-fit: contain; /* Ensures the entire image is visible without cropping */
     border-radius: 10px; /* Optional for rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional for styling */
-  }
+    aspect-ratio: auto; /* Maintain original aspect ratio */
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .organic-farming-heading {
@@ -127,6 +107,11 @@
     .vegetable-section p {
         font-size: 0.95rem;
     }
+
+    .carousel-image {
+        width: 80px; /* Reduce size on tablet */
+        height: 80px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -138,7 +123,8 @@
         width: 200px;
     }
 
-    .organic-farming-section {
+    .organic-farming-section,
+    .vegetable-section {
         width: 95%;
     }
 
@@ -153,6 +139,11 @@
     .vegetable-section p {
         font-size: 0.9rem;
     }
+
+    .carousel-image {
+        width: 60px; /* Reduce size on mobile */
+        height: 60px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -164,16 +155,18 @@
         width: 150px;
     }
 
-    .organic-farming-section h2 {
-        font-size: 1.2rem;
-    }
-
+    .organic-farming-section h2,
     .vegetable-section h3 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .vegetable-section p {
         font-size: 0.85rem;
+    }
+
+    .carousel-image {
+        width: 50px; /* Further reduce size on smaller screens */
+        height: 50px;
     }
 }
 

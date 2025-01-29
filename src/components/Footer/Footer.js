@@ -18,9 +18,9 @@ function Footer() {
                     <a href="/about">About Us</a>
                     <a href="/programs">Programs</a>
                     <a href="/stories">Stories</a>
-                    <a href="/news">News & Events</a>
-                    <a href="/get-involved">Get Involved</a>
-                    <a href="/contact">Contact Us</a>
+                    <a href="/news_events">News & Events</a>
+                    <a href="/getinvolved">Get Involved</a>
+                    <a href="/contactus">Contact Us</a>
                 </div>
                 <div className="footer-bottom">
                     <p>&copy; 2024 Shri Madhav Jan Sewa Nyas. All rights reserved.</p>

@@ -1,60 +1,45 @@
+/* General Styling */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-.carousel-container {
-  width: 100%;
-  height: 400px; /* Adjust height as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden; /* Ensures no overflow */
-}
-
-.carousel-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* Ensures the entire image is visible without cropping */
-  border-radius: 10px; /* Optional for rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional for styling */
-}
-
-
-.required {
-  color: red;
-  margin-left: 5px;
-  font-weight: bold;
-}
-
-
-/* Global Settings */
-* {
+/* Reset and Base Styles */
+html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Lora', serif;
   box-sizing: border-box;
 }
 
-html {
-  font-size: 16px; /* Default base font size */
+* {
+  box-sizing: inherit;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Skill Development Center */
+/* Skill Development Center Section */
 .skill-development-center {
   padding: 5vh 5%;
-  background: linear-gradient(to right, #e3f2fd, #f3e5ab); /* Light blue to light yellow gradient */
+  background: linear-gradient(to right, #e3f2fd, #f3e5ab);
   color: #333;
   animation: fadeIn 1s ease-out;
+  width: 100%;
 }
 
+/* Container for content */
+.container {
+  width: 100%; /* Takes up the full width of the screen */
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+/* Heading Styles */
 .heading {
   text-align: center;
-  font-size: clamp(2rem, 5vw, 3.5rem); /* Scales between 2rem and 3.5rem */
-  color: #f57f17; /* Saffron color */
+  font-size: clamp(2rem, 5vw, 3.5rem); /* Dynamically scales */
+  color: #f57f17;
   font-weight: 700;
   margin-bottom: 5vh;
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5);
@@ -74,27 +59,27 @@ body {
   animation: gradientMove 4s linear infinite;
 }
 
+/* Section Styling (White Boxes) */
 .section {
   background: #fff;
   border-radius: 15px;
   padding: 5%;
-  margin-bottom: 4vh;
+  margin: 2vh auto;
+  width: 100%; /* Takes up the full width of the screen */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1s ease-out, slideUp 1s ease-in-out;
 }
 
-.section h2 {
-  text-align: center;
-  color: #f57f17;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  margin-bottom: 2vh;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+/* Adjust table widths */
+.courses-table-container {
+  width: 100%;
+  overflow-x: auto;
 }
 
 .courses-table {
-  width: 100%;
+  width: 100%; /* Ensure table uses full width */
   border-collapse: collapse;
-  overflow-x: auto; /* Enables horizontal scrolling */
+  table-layout: fixed;
 }
 
 .courses-table th,
@@ -103,6 +88,7 @@ body {
   text-align: left;
   border: 1px solid #ddd;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
+  word-wrap: break-word;
 }
 
 .courses-table th {
@@ -110,6 +96,7 @@ body {
   color: #fff;
 }
 
+/* Form Styling */
 .admission-form {
   display: flex;
   flex-direction: column;
@@ -166,6 +153,26 @@ button[type="submit"]:hover {
 
 /* Responsive Design */
 
+/* For large desktops and monitors */
+@media (min-width: 1200px) {
+  .container {
+    width: 100%; /* Full width for large screens */
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .section {
+    width: 100%; /* Full width for large screens */
+  }
+
+  .courses-table th,
+  .courses-table td {
+    font-size: 1.1rem;
+  }
+}
+
 /* For large tablets and small desktops */
 @media (max-width: 1024px) {
   .heading {
@@ -173,6 +180,7 @@ button[type="submit"]:hover {
   }
 
   .section {
+    width: 100%; /* Full width for larger tablets/small desktops */
     padding: 4%;
   }
 

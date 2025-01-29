@@ -2,19 +2,22 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .athletics-container {
-    padding: 60px 20px;
+    padding: 5vh 5%; /* Adjusted for responsiveness */
     background: linear-gradient(to right, #e3f2fd, #f3e5ab); /* Light blue to light yellow gradient */
     font-family: 'Poppins', sans-serif;
     color: #333;
     animation: fadeIn 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .athletics-heading {
     text-align: center;
-    font-size: 3.2rem;
+    font-size: clamp(2.5rem, 5vw, 3.2rem); /* Scales between 2.5rem and 3.2rem */
     color: #f57f17; /* Saffron color */
     font-weight: 700;
-    margin-bottom: 60px;
+    margin-bottom: 5vh;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5);
     letter-spacing: 2px;
     position: relative;
@@ -37,40 +40,35 @@
 .athletics-section {
     background: #fff;
     border-radius: 15px;
-    padding: 30px;
-    margin: 40px auto;
+    padding: 4%;
+    margin: 2vh auto;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease-out, slideUp 1s ease-in-out;
     width: 90%; /* Adjust for smaller screens */
-    max-width: 75%;
+    max-width: 800px;
 }
 
 .athletics-section h2 {
     text-align: center;
     color: #f57f17;
-    margin-bottom: 20px;
-    font-size: 2rem;
+    margin-bottom: 2vh;
+    font-size: clamp(1.5rem, 3vw, 2rem); /* Scales between 1.5rem and 2rem */
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .athletics-section h3 {
     color: #f57f17;
     margin-bottom: 10px;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Scales between 1rem and 1.5rem */
     text-align: left;
     font-weight: 700;
 }
 
 .athletics-section p {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 2vw, 1.2rem); /* Scales between 0.9rem and 1.2rem */
     line-height: 1.6;
     margin-left: 20px;
     color: #333;
-}
-
-.athletics-section ul {
-    list-style-type: disc;
-    margin-left: 40px;
 }
 
 .carousel-container {
@@ -143,7 +141,11 @@
     }
 
     .athletics-section {
-        padding: 20px;
+        padding: 3%;
+    }
+
+    .athletics-section h2 {
+        font-size: 1.8rem;
     }
 }
 
@@ -157,7 +159,7 @@
     }
 
     .athletics-section h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -168,14 +170,14 @@
     }
 
     .athletics-section {
-        padding: 15px;
+        padding: 2%;
     }
 
     .athletics-section h2 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .athletics-section p, .athletics-section h3 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }

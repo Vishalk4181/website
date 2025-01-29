@@ -1,7 +1,26 @@
 import React from 'react';
 import './gaushala.css';
+import Slider from 'react-slick';
 
-const gaushala = () => {
+import Gaushala1 from '../../../../assets/images/Gaushala1.jpg'
+import Gaushala2 from '../../../../assets/images/Gaushala2.jpg'
+import Gaushala3 from '../../../../assets/images/Gaushala3.jpg'
+import Gaushala4 from '../../../../assets/images/Gaushala4.jpg'
+import Gaushala5 from '../../../../assets/images/Gaushala5.jpg'
+
+
+const Gaushala = () => {
+  const carouselSettings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Loop through slides
+    speed: 500, // Transition speed in milliseconds
+    slidesToShow: 1, // Show one slide at a time
+    slidesToScroll: 1, // Scroll one slide at a time
+    autoplay: true, // Enable auto-play
+    autoplaySpeed: 3000, // Time in milliseconds between slides
+    arrows: true, // Enable navigation arrows
+  };
+
   return (
     <div className="gaushala-page">
       <header className="header">
@@ -37,6 +56,30 @@ const gaushala = () => {
         </p>
       </section>
 
+
+      <div className="carousel-section">
+          <Slider {...carouselSettings}>
+            <div>
+              <img src={Gaushala1} alt="Slide 1" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Gaushala2} alt="Slide 2" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Gaushala3} alt="Slide 3" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Gaushala4} alt="Slide 4" className="carousel-image" />
+            </div>
+            <div>
+              <img src={Gaushala5} alt="Slide 5" className="carousel-image" />
+            </div>
+          </Slider>
+        </div>
+
+
+
+
       <section className="process-section">
         <h2>Our Gaushala Process</h2>
         <div className="process-steps">
@@ -70,4 +113,4 @@ const gaushala = () => {
   );
 };
 
-export default gaushala;
+export default Gaushala;

@@ -106,7 +106,17 @@
     font-size: 2.5rem; /* Smaller title for smaller screens */
   }
 
+  .program-grid {
+    display: flex; /* Switch to flex for centering */
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards horizontally */
+    justify-content: center;
+    gap: 30px; /* Space between cards */
+  }
+
   .program-card {
+    width: 90%; /* Take up 90% of the width */
+    max-width: 350px; /* Optional: Limit the width */
     padding: 15px; /* Adjust padding for smaller screens */
   }
 

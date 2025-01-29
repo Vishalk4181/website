@@ -1,243 +1,270 @@
+/* Carousel */
+.carousel-container {
+  width: 100%;
+  height: 100%; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensures no overflow */
+}
+
+.carousel-image {
+  width: 100px; /* Adjust width as needed */
+  height: 100px; /* Ensure height is explicitly set */
+  object-fit: contain; /* Ensures the entire image is visible without cropping */
+  border-radius: 10px; /* Optional for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional for styling */
+  aspect-ratio: auto; /* Maintain original aspect ratio */
+}
+
+
+
 /* General Styles */
 .gaushala-page {
-    padding: 60px 20px;
-    background: linear-gradient(to right, #e3f2fd, #f3e5ab);
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    animation: fadeIn 1s ease-out;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #e3f2fd, #f3e5ab);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  animation: fadeIn 1s ease-out;
 }
 
 /* Header */
 .header {
-    text-align: center;
-    margin-bottom: 60px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 /* Title */
 .title {
-    font-size: 3.2rem;
-    color: #f57f17; /* Saffron color */
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5);
-    letter-spacing: 2px;
-    position: relative;
-    animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out;
+  font-size: 3.2rem;
+  color: #f57f17; /* Saffron color */
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5);
+  letter-spacing: 2px;
+  position: relative;
+  animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out;
 }
 
 .title::after {
-    content: '';
-    display: block;
-    width: 400px;
-    height: 8px;
-    background: linear-gradient(45deg, #fe851c, #6fbeff);
-    margin: 20px auto 0;
-    border-radius: 5px;
-    background-size: 200% 200%;
-    animation: gradientMove 4s linear infinite;
+  content: '';
+  display: block;
+  width: 50%;
+  height: 8px;
+  background: linear-gradient(45deg, #fe851c, #6fbeff);
+  margin: 20px auto 0;
+  border-radius: 5px;
+  background-size: 200% 200%;
+  animation: gradientMove 4s linear infinite;
 }
 
 /* Subtitle */
 .subtitle {
-    font-size: 1.2em;
-    color: #000000;
-    margin-top: 10px;
-    font-style: italic;
+  font-size: 1.2em;
+  color: #000000;
+  margin-top: 10px;
+  font-style: italic;
 }
 
 /* Sections */
 .intro-section, .benefits-section, .impact-section, .process-section, .get-involved-section {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 30px;
-    margin-bottom: 40px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1s ease-out, slideUp 1s ease-in-out;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out, slideUp 1s ease-in-out;
 }
 
 h2 {
-    font-size: 2rem;
-    color: #f57f17; /* Saffron color */
-    margin-bottom: 20px;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  font-size: 2rem;
+  color: #f57f17; /* Saffron color */
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 /* Benefits List */
 .benefits-list {
-    list-style-type: disc;
-    margin-left: 40px;
-    font-size: 1.1rem;
-    color: #555;
+  list-style-type: disc;
+  margin-left: 40px;
+  font-size: 1.1rem;
+  color: #555;
 }
 
 .benefits-list li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* Process Steps */
 .process-steps {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .step {
-    background-color: #f1f1f1;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .step h3 {
-    color: #f57f17;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  color: #f57f17;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .step p {
-    color: #555;
-    font-size: 1.1rem;
+  color: #555;
+  font-size: 1.1rem;
 }
-
-
 
 /* Animations */
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideUp {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes bounceIn {
-    0% {
-      transform: scale(0.8);
-      opacity: 0;
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes gradientMove {
-    0% {
-      background-position: 0% 0%;
-    }
-    100% {
-      background-position: 100% 100%;
-    }
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-  .gaushala-page {
-    padding: 40px 15px;
-  }
+.gaushala-page {
+  padding: 40px 15px;
+}
 
-  .title {
-    font-size: 2.8rem; /* Slightly smaller title */
-  }
+.title {
+  font-size: 2.8rem; /* Slightly smaller title */
+}
 
-  .subtitle {
-    font-size: 1.1em;
-  }
+.subtitle {
+  font-size: 1.1em;
+}
 
-  h2 {
-    font-size: 1.8rem; /* Adjust subtitle size */
-  }
+h2 {
+  font-size: 1.8rem; /* Adjust subtitle size */
+}
 
-  .intro-section, .benefits-section, .impact-section, .process-section, .get-involved-section {
-    padding: 25px;
-  }
+.intro-section, .benefits-section, .impact-section, .process-section, .get-involved-section {
+  padding: 25px;
+}
 
-  .process-steps {
-    flex-direction: column;
-    gap: 15px;
-  }
+.process-steps {
+  flex-direction: column;
+  gap: 15px;
+}
 
-  .step {
-    padding: 12px;
-  }
+.step {
+  padding: 12px;
+}
 }
 
 @media (max-width: 768px) {
-  .gaushala-page {
-    padding: 30px 10px;
-  }
+.gaushala-page {
+  padding: 30px 10px;
+}
 
-  .title {
-    font-size: 2.4rem; /* Reduce title font size */
-  }
+.title {
+  font-size: 2.4rem; /* Reduce title font size */
+}
 
-  .subtitle {
-    font-size: 1em; /* Smaller subtitle for mobile */
-  }
+.subtitle {
+  font-size: 1em; /* Smaller subtitle for mobile */
+}
 
-  h2 {
-    font-size: 1.5rem; /* Adjust header font size */
-  }
+h2 {
+  font-size: 1.5rem; /* Adjust header font size */
+}
 
-  .intro-section, .benefits-section, .impact-section, .process-section, .get-involved-section {
-    padding: 20px;
-  }
+.intro-section, .benefits-section, .impact-section, .process-section, .get-involved-section {
+  padding: 20px;
+}
 
-  .process-steps {
-    gap: 10px;
-  }
+.process-steps {
+  gap: 10px;
+}
 
-  .step {
-    padding: 10px;
-  }
+.step {
+  padding: 10px;
+}
 
-  .donate-button {
-    font-size: 1.1em;
-    padding: 12px 25px;
-  }
+.donate-button {
+  font-size: 1.1em;
+  padding: 12px 25px;
+}
 }
 
 @media (max-width: 480px) {
-  .gaushala-page {
-    padding: 20px 5px;
-  }
+.gaushala-page {
+  padding: 20px 5px;
+}
 
-  .title {
-    font-size: 2rem; /* Even smaller title */
-  }
+.title {
+  font-size: 2rem; /* Even smaller title */
+}
 
-  .subtitle {
-    font-size: 0.9em; /* Smaller subtitle */
-  }
+.subtitle {
+  font-size: 0.9em; /* Smaller subtitle */
+}
 
-  h2 {
-    font-size: 1.3rem;
-  }
+h2 {
+  font-size: 1.3rem;
+}
 
-  .intro-section, .benefits-section, .impact-section, .process-section, .get-involved-section {
-    padding: 15px;
-  }
+.intro-section, .benefits-section, .impact-section, .process-section, .get-involved-section {
+  padding: 15px;
+}
 
-  .donate-button {
-    font-size: 1em;
-    padding: 10px 20px;
-  }
+.donate-button {
+  font-size: 1em;
+  padding: 10px 20px;
+}
+
+.process-steps {
+  gap: 8px;
+}
+
+.step {
+  padding: 8px;
+}
 }

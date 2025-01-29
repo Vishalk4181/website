@@ -1,7 +1,27 @@
 import React from 'react';
 import './tissueculture.css';
+import Slider from 'react-slick';
+
+
+import TissueCulture1 from '../../../../assets/images/TissueCulture1.jpg'
+import TissueCulture2 from '../../../../assets/images/TissueCulture2.jpg'
+import TissueCulture3 from '../../../../assets/images/TissueCulture3.jpg'
+import TissueCulture4 from '../../../../assets/images/TissueCulture4.jpg'
+import TissueCulture5 from '../../../../assets/images/TissueCulture5.jpg'
+
+
 
 const tissueculture = () => {
+  const carouselSettings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Loop through slides
+    speed: 500, // Transition speed in milliseconds
+    slidesToShow: 1, // Show one slide at a time
+    slidesToScroll: 1, // Scroll one slide at a time
+    autoplay: true, // Enable auto-play
+    autoplaySpeed: 3000, // Time in milliseconds between slides
+    arrows: true, // Enable navigation arrows
+  };
   return (
     <div className="tissue-culture-page">
       <header className="header">
@@ -37,6 +57,28 @@ const tissueculture = () => {
           Over the years, our tissue culture program has positively impacted hundreds of farmers by providing them with access to high-yielding, resilient crops. We have successfully cultivated plant varieties such as bananas, sugarcane, and ornamental plants, ensuring consistent quality and productivity.
         </p>
       </section>
+
+      <div className="carousel-section">
+          <Slider {...carouselSettings}>
+            <div>
+              <img src={TissueCulture1} alt="Slide 1" className="carousel-image" />
+            </div>
+            <div>
+              <img src={TissueCulture2} alt="Slide 2" className="carousel-image" />
+            </div>
+            <div>
+              <img src={TissueCulture3} alt="Slide 3" className="carousel-image" />
+            </div>
+            <div>
+              <img src={TissueCulture4} alt="Slide 4" className="carousel-image" />
+            </div>
+            <div>
+              <img src={TissueCulture5} alt="Slide 5" className="carousel-image" />
+            </div>
+          </Slider>
+        </div>
+
+
 
       <section className="process-section">
         <h2>Our Tissue Culture Process</h2>

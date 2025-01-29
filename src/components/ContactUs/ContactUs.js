@@ -17,10 +17,10 @@ const ContactUs = () => {
           Panipat, Haryana, 132103
         </p>
         <p>
-          <strong>Email: shrimadhavjansewa@gmail.com</strong>
+          <strong>Email:</strong> shrimadhavjansewa@gmail.com
         </p>
         <p>
-          <strong>Phone: +91 99913 75451</strong>
+          <strong>Phone: +91 9779586559 & 8199997001</strong>
         </p>
       </div>
 
@@ -41,7 +41,7 @@ const ContactUs = () => {
       </div>
 
       {/* Contact Form Container */}
-      <div className="form-container">
+      {/* <div className="form-container">
         <form>
           <h2>Get in Touch</h2>
           <div className="form-group">
@@ -60,7 +60,7 @@ const ContactUs = () => {
             <button type="submit">Submit</button>
           </div>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 };

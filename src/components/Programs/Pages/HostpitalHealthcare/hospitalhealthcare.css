@@ -1,7 +1,6 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-
 .hospital-container {
     padding: 40px 15px;
     background: linear-gradient(to right, #e3f2fd, #f3e5ab); /* Light blue to light yellow gradient */

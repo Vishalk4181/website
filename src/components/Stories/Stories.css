@@ -3,214 +3,234 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .carousel-container {
-    width: 100%;
-    height: 400px; /* Adjust height as needed */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* Ensures no overflow */
-  }
-  
-  .carousel-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Ensures the entire image is visible without cropping */
-    border-radius: 10px; /* Optional for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional for styling */
-  }
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensures no overflow */
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the entire image is visible without cropping */
+  border-radius: 10px; /* Optional for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional for styling */
+}
 
 /* Stories Section */
 .stories {
-    padding: 60px 20px;
-    background: linear-gradient(to right, #e3f2fd, #f3e5ab); /* Light blue to light yellow gradient */
-    color: #333;
-    font-family: 'Poppins', sans-serif; /* Consistent font style */
-    animation: fadeIn 1s ease-out; /* Fade-in animation */
+  padding: 60px 20px;
+  background: linear-gradient(to right, #e3f2fd, #f3e5ab); /* Light blue to light yellow gradient */
+  color: #333;
+  font-family: 'Poppins', sans-serif; /* Consistent font style */
+  animation: fadeIn 1s ease-out; /* Fade-in animation */
 }
 
 .stories-heading {
-    text-align: center;
-    font-size: 3.2rem; /* Larger font size for impact */
-    margin-bottom: 60px;
-    color: #f57f17; /* Saffron color for consistency */
-    font-weight: 700;
-    position: relative;
-    animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out; /* Bounce-in animation */
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5); /* Enhanced text shadow */
-    letter-spacing: 2px; /* Increased letter spacing */
+  text-align: center;
+  font-size: 3.2rem; /* Larger font size for impact */
+  margin-bottom: 60px;
+  color: #f57f17; /* Saffron color for consistency */
+  font-weight: 700;
+  position: relative;
+  animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out; /* Bounce-in animation */
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(255, 193, 7, 0.5); /* Enhanced text shadow */
+  letter-spacing: 2px; /* Increased letter spacing */
 }
 
 .stories-heading::after {
-    content: '';
-    display: block;
-    width: 400px; /* Wider underline for emphasis */
-    height: 8px;
-    background: linear-gradient(45deg, #fe851c, #6fbeff); /* Gradient underline */
-    margin: 20px auto 0;
-    border-radius: 5px;
-    background-size: 200% 200%; /* Smooth animation effect */
-    animation: gradientMove 4s linear infinite; /* Continuous gradient animation */
+  content: '';
+  display: block;
+  width: 400px; /* Wider underline for emphasis */
+  height: 8px;
+  background: linear-gradient(45deg, #fe851c, #6fbeff); /* Gradient underline */
+  margin: 20px auto 0;
+  border-radius: 5px;
+  background-size: 200% 200%; /* Smooth animation effect */
+  animation: gradientMove 4s linear infinite; /* Continuous gradient animation */
 }
 
 .story-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .story {
-    background: #fff;
-    border-radius: 15px; /* Rounded corners for consistency */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
-    padding: 30px; /* Increased padding for better content spacing */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeIn 1s ease-out, slideUp 1s ease-in-out; /* Fade-in and slide-up animations */
+  background: #fff;
+  border-radius: 15px; /* Rounded corners for consistency */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  padding: 30px; /* Increased padding for better content spacing */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-out, slideUp 1s ease-in-out; /* Fade-in and slide-up animations */
 }
 
 .story:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .story-title {
-    font-size: 1.5rem;
-    color: #f57f17; /* Consistent saffron color */
-    margin-bottom: 10px;
-    font-weight: 700; /* Bold title */
+  font-size: 1.5rem;
+  color: #f57f17; /* Consistent saffron color */
+  margin-bottom: 10px;
+  font-weight: 700; /* Bold title */
 }
 
 .story-date {
-    font-size: 1rem;
-    color: #888;
-    margin-bottom: 10px;
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 10px;
 }
 
 .story-content {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.6;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
 }
 
 /* Animations */
 @keyframes gradientMove {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes bounceIn {
-    0% {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-    .stories {
-        padding: 40px 20px;
-    }
+  .stories {
+    padding: 40px 20px;
+  }
 
-    .stories-heading {
-        font-size: 2.5rem; /* Reduced font size */
-        margin-bottom: 40px; /* Reduced margin */
-    }
+  .stories-heading {
+    font-size: 2.5rem; /* Reduced font size */
+    margin-bottom: 40px; /* Reduced margin */
+  }
 
-    .story {
-        padding: 25px; /* Reduced padding */
-    }
+  .story {
+    padding: 25px; /* Reduced padding */
+  }
 
-    .story-title {
-        font-size: 1.3rem; /* Reduced title size */
-    }
+  .story-title {
+    font-size: 1.3rem; /* Reduced title size */
+  }
 
-    .story-content {
-        font-size: 1rem; /* Adjusted content font size */
-    }
+  .story-content {
+    font-size: 1rem; /* Adjusted content font size */
+  }
+
+  .carousel-container {
+    height: 350px; /* Adjust carousel height for tablets */
+  }
+
+  .carousel-image {
+    object-fit: cover; /* Cover mode for better image display on tablets */
+  }
 }
 
 @media (max-width: 768px) {
-    .stories {
-        padding: 30px 15px;
-    }
+  .stories {
+    padding: 30px 15px;
+  }
 
-    .stories-heading {
-        font-size: 2rem; /* Further reduced heading size */
-        margin-bottom: 30px; /* Further reduced margin */
-    }
+  .stories-heading {
+    font-size: 2rem; /* Further reduced heading size */
+    margin-bottom: 30px; /* Further reduced margin */
+  }
 
-    .story {
-        padding: 20px; /* Reduced padding */
-    }
+  .story {
+    padding: 20px; /* Reduced padding */
+  }
 
-    .story-title {
-        font-size: 1.2rem; /* Reduced title size */
-    }
+  .story-title {
+    font-size: 1.2rem; /* Reduced title size */
+  }
 
-    .story-content {
-        font-size: 0.95rem; /* Adjusted content font size */
-    }
+  .story-content {
+    font-size: 0.95rem; /* Adjusted content font size */
+  }
 
-    .story-list {
-        flex-direction: column; /* Stack stories vertically */
-    }
+  .story-list {
+    flex-direction: column; /* Stack stories vertically */
+  }
+
+  .carousel-container {
+    height: 300px; /* Further adjust carousel height */
+  }
+
+  .carousel-image {
+    object-fit: contain; /* Adjust image display for smaller screens */
+  }
 }
 
 @media (max-width: 480px) {
-    .stories {
-        padding: 20px 10px;
-    }
+  .stories {
+    padding: 20px 10px;
+  }
 
-    .stories-heading {
-        font-size: 1.6rem; /* Further reduced heading size */
-        margin-bottom: 20px; /* Further reduced margin */
-    }
+  .stories-heading {
+    font-size: 1.6rem; /* Further reduced heading size */
+    margin-bottom: 20px; /* Further reduced margin */
+  }
 
-    .story {
-        padding: 15px; /* Reduced padding */
-    }
+  .story {
+    padding: 15px; /* Reduced padding */
+  }
 
-    .story-title {
-        font-size: 1rem; /* Reduced title size */
-    }
+  .story-title {
+    font-size: 1rem; /* Reduced title size */
+  }
 
-    .story-content {
-        font-size: 0.9rem; /* Adjusted content font size */
-    }
+  .story-content {
+    font-size: 0.9rem; /* Adjusted content font size */
+  }
 
-    .carousel-image {
-        height: auto; /* Adjust carousel image height on smaller screens */
-    }
+  .carousel-container {
+    height: 250px; /* Adjust carousel height for mobile */
+  }
+
+  .carousel-image {
+    object-fit: contain; /* Adjust image display for mobile screens */
+  }
 }
