@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.592ebf13.css",
-    "main.js": "/static/js/main.cbce20ed.js",
+    "main.css": "/static/css/main.86a3930a.css",
+    "main.js": "/static/js/main.2721312e.js",
     "static/js/453.a7d64614.chunk.js": "/static/js/453.a7d64614.chunk.js",
     "static/media/Organic1.jpg": "/static/media/Organic1.f8a0fe7e52a0347e98e1.jpg",
     "static/media/Skill1.jpg": "/static/media/Skill1.9223aad767be04d2b4c0.jpg",
@@ -76,7 +76,6 @@
     "static/media/Hospital4.jpg": "/static/media/Hospital4.63c6b3c1bf67ee61eda1.jpg",
     "static/media/Hospital5.jpg": "/static/media/Hospital5.c977cb56a7f223352bda.jpg",
     "static/media/Hospital1.jpg": "/static/media/Hospital1.5e92b8c632ccd8cf9669.jpg",
-    "static/media/Background Image.jpg": "/static/media/Background Image.8504a66dffdd83bdeb1f.jpg",
     "static/media/Volleyball3.jpg": "/static/media/Volleyball3.2a081729a6aa4ea18d2a.jpg",
     "static/media/Volleyball1.jpg": "/static/media/Volleyball1.96ebf1a53df66e26adcd.jpg",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -84,12 +83,12 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.592ebf13.css.map": "/static/css/main.592ebf13.css.map",
-    "main.cbce20ed.js.map": "/static/js/main.cbce20ed.js.map",
+    "main.86a3930a.css.map": "/static/css/main.86a3930a.css.map",
+    "main.2721312e.js.map": "/static/js/main.2721312e.js.map",
     "453.a7d64614.chunk.js.map": "/static/js/453.a7d64614.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.592ebf13.css",
-    "static/js/main.cbce20ed.js"
+    "static/css/main.86a3930a.css",
+    "static/js/main.2721312e.js"
   ]
 }

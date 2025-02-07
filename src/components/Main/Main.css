@@ -17,6 +17,7 @@ html, body {
     width: 100%;
     overflow-x: hidden;
     font-family: serif;
+    background: linear-gradient(to right, #f3e5ab, #e3f2fd);
 }
 
 /* Main Section */
@@ -27,64 +28,97 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 5vw;
+    padding: 0 8vw; /* Increase side padding for more space */
     box-sizing: border-box;
     overflow: hidden;
 }
 
-.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../../assets/images/Background Image.jpg') no-repeat center center fixed;
-    background-size: cover;
-    z-index: -1;
-    opacity: 0.8;
-    filter: blur(5px);
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-    z-index: -1;
-}
-
 /* Carousel */
 .carousel-container {
-    width: 100%;
-    height: 400px; /* Adjust height as needed */
+    width: 90%;
+    height: 450px; /* Adjust height for a larger carousel */
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Ensures no overflow */
+    overflow: hidden;
+    margin-bottom: 2vw; /* Add margin to space out from below content */
 }
 
 .carousel-image {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensures the entire image is visible without cropping */
-    border-radius: 10px; /* Optional for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional for styling */
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Intro Section */
+.intro-section {
+    background: linear-gradient(to right, #f3e5ab, #e3f2fd);
+    text-align: center;
+    padding: 5vw 10vw;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+    max-width: 90%;
+    min-height: 50vh; /* Adjust height to center better */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Centers horizontally */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.intro-section h1 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: bold;
+    text-align: center;
+    color: #f57f17;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+}
+
+.intro-section h1::after {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 5px;
+    background: linear-gradient(45deg, #fe851c, #6fbeff);
+    margin: 0.2rem auto;
+    border-radius: 5px;
+    background-size: 200% 200%;
+    animation: gradientMove 4s linear infinite;
+}
+
+
+.intro-section p {
+    font-size: 1.6rem;
+    color: #333;
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+
 
 /* Section Container */
 .section-container {
     background: linear-gradient(to right, #f3e5ab, #e3f2fd);
     display: flex;
     align-items: center;
-    background-color: #f9f9f9;
-    padding: 2vw;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: linear-gradient(to right, #f3e5ab, #e3f2fd);
+    padding: 4vw; /* Increase padding for more space */
+    border-radius: 12px; /* Slightly round the edges */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     animation: fadeInUp 1s ease-out;
     flex-wrap: wrap;
+    margin-top: 3vw; /* Add space between sections */
 }
 
 .section-container img {
@@ -103,12 +137,13 @@ html, body {
 
 .section-content {
     flex: 1;
-    padding: 2vw;
+    padding: 3vw; /* Add more padding inside the content */
     text-align: center;
+    margin-top: 1vw; /* Space between heading and content */
 }
 
 .section-content h2 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(2rem, 6vw, 4rem); /* Make heading responsive with larger font */
     margin-bottom: 2rem;
     color: #f57f17;
     font-weight: 700;
@@ -124,16 +159,16 @@ html, body {
     width: 50%;
     height: 5px;
     background: linear-gradient(45deg, #fe851c, #6fbeff);
-    margin: 1rem auto;
+    margin: 1.5rem auto; /* Increased margin for spacing */
     border-radius: 5px;
     background-size: 200% 200%;
     animation: gradientMove 4s linear infinite;
 }
 
 .section-content p {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Increased font size for readability */
     color: #666;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem; /* Added margin for more space */
     text-align: justify;
 }
 
@@ -141,27 +176,40 @@ html, body {
     font-weight: bold;
 }
 
-
-
-
-
-
 /* Navigation Table */
+.table-container {
+    background-color: #fff;
+    border-radius: 12px; /* Rounded corners for the container */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 3rem; /* Increase padding for more breathing space */
+    margin-top: 3vw; /* Space between other sections */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .navigation-table {
-    width: 80%; /* Reduced width */
-    margin: 2rem auto;
+    width: 90%;
+    margin: auto;
     border-collapse: collapse;
-    background: #fff;
-    border-radius: 10px;
+    background: linear-gradient(to right, #f3e5ab, #e3f2fd);
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navigation-table th,
 .navigation-table td {
-    padding: 1rem;
+    padding: 1.5rem; /* Increased padding inside cells */
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px solid #ddd; /* Thicker border for cleaner lines */
+}
+
+.navigation-table:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .navigation-table th {
@@ -177,47 +225,11 @@ html, body {
 .navigation-table a {
     color: #007bff;
     text-decoration: none;
-    font-weight: bold; /* Make navigation topics bold */
+    font-weight: bold;
 }
 
 .navigation-table a:hover {
     text-decoration: underline;
-}
-
-/* Custom Scrollbar */
-.course-sector::-webkit-scrollbar,
-.sustainable-sector::-webkit-scrollbar {
-    width: 8px;
-}
-
-.course-sector::-webkit-scrollbar-track,
-.sustainable-sector::-webkit-scrollbar-track {
-    background: #e4e4e4;
-    border-radius: 10px;
-}
-
-.course-sector::-webkit-scrollbar-thumb,
-.sustainable-sector::-webkit-scrollbar-thumb {
-    background: linear-gradient(60deg, #79c0fe, #ffa200);
-    border-radius: 10px;
-    transition: background 0.3s ease-in-out;
-}
-
-.course-sector::-webkit-scrollbar-thumb:hover,
-.sustainable-sector::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(60deg, #ffa200, #79c0fe);
-}
-
-.course-sector,
-.sustainable-sector {
-    scrollbar-width: thin;
-    scrollbar-color: #ffa200 #e4e4e4;
-    overflow-y: auto;
-}
-
-.course-sector,
-.sustainable-sector {
-    scroll-behavior: smooth;
 }
 
 /* Animations */
@@ -244,7 +256,7 @@ html, body {
 /* Media Queries */
 @media (max-width: 1200px) {
     .section-content h2 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .section-container img {
@@ -254,7 +266,7 @@ html, body {
 
 @media (max-width: 1024px) {
     .section-content h2 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .section-container img {
@@ -269,48 +281,48 @@ html, body {
 @media (max-width: 768px) {
     .section-container {
         flex-direction: column;
-        padding: 5vw;
+        padding: 6vw; /* More space for smaller screens */
     }
 
     .section-container img {
         max-width: 80%;
-        margin-bottom: 2vw;
+        margin-bottom: 3vw;
     }
 
     .section-content {
         text-align: center;
-        padding: 2vw;
+        padding: 3vw;
+    }
+
+    .section-content p {
+        font-size: 1.1rem;
+    }
+
+    .navigation-table {
+        width: 100%;
+    }
+
+    .navigation-table th, .navigation-table td {
+        padding: 1rem; /* Reduced padding for small screens */
+    }
+
+    .navigation-table a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-content h2 {
+        font-size: 2.2rem;
     }
 
     .section-content p {
         font-size: 1rem;
     }
 
-    .navigation-table {
-        width: 100%;
-    }
-
-    .navigation-table th, .navigation-table td {
-        padding: 0.75rem;
-    }
-
-    .navigation-table a {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .section-content h2 {
-        font-size: 1.8rem;
-    }
-
-    .section-content p {
-        font-size: 0.8rem;
-    }
-
     .section-container img {
         width: 100%;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     .navigation-table {
@@ -318,11 +330,11 @@ html, body {
     }
 
     .navigation-table th, .navigation-table td {
-        padding: 0.5rem;
+        padding: 0.75rem; /* Adjusted padding */
     }
 
     .navigation-table a {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }
 
@@ -332,18 +344,18 @@ html, body {
     }
 
     .section-content h2 {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 
     .section-content p {
-        font-size: 0.75rem;
+        font-size: 1rem;
     }
 
     .navigation-table th, .navigation-table td {
-        padding: 0.5rem;
+        padding: 0.75rem;
     }
 
     .navigation-table a {
-        font-size: 0.75rem;
+        font-size: 1rem;
     }
 }

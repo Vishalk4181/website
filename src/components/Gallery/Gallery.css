@@ -1,0 +1,188 @@
+/* Gallery Page Container */
+.gallery-container {
+    text-align: center;
+    padding: 4vw 8vw;
+    background: linear-gradient(to right, #4a90e2, #ffcc80);
+    min-height: 100vh;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Gallery Title */
+.gallery-title {
+    font-size: 3vw;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.5vw;
+    animation: bounceIn 1.5s ease-in-out;
+}
+
+/* Gallery Description */
+.gallery-description {
+    font-size: 1.6vw;
+    color: #fff;
+    max-width: 70%;
+    margin: 0 auto 3vw;
+    line-height: 1.8;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.5vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid Layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gallery Cards */
+.gallery-card {
+    background: white;
+    padding: 2vw;
+    border-radius: 14px;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+    opacity: 0; /* Start hidden */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Thumbnail Image */
+.gallery-thumbnail {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1vw;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effect */
+.gallery-card:hover {
+    transform: scale(1.07) rotate(3deg);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(to right, #ff5722, #ff9800);
+    color: white;
+}
+
+.gallery-card:hover .gallery-thumbnail {
+    transform: scale(1.15);
+    filter: brightness(70%);
+}
+
+/* Animate cards from different directions */
+.gallery-card:nth-child(4n + 1) {
+    animation: slideInLeft 1s ease-out forwards;
+}
+.gallery-card:nth-child(4n + 2) {
+    animation: slideInRight 1s ease-out forwards;
+}
+.gallery-card:nth-child(4n + 3) {
+    animation: slideInTop 1s ease-out forwards;
+}
+.gallery-card:nth-child(4n) {
+    animation: slideInBottom 1s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .gallery-title {
+        font-size: 5vw;
+    }
+
+    .gallery-description {
+        font-size: 2.5vw;
+    }
+
+    .gallery-card {
+        font-size: 2vw;
+        padding: 3vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-title {
+        font-size: 6vw;
+    }
+
+    .gallery-description {
+        font-size: 3vw;
+    }
+
+    .gallery-card {
+        font-size: 3vw;
+        padding: 4vw;
+    }
+}
+
+/* Slide-in Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bounce-in Animation */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}

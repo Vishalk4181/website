@@ -2,24 +2,24 @@ import React from 'react';
 import './organicfarming.css';
 import Slider from 'react-slick';
 
-import Organic1 from '../../../../assets/images/Organic1.jpg'
-import Organic2 from '../../../../assets/images/Organic2.jpg'
-import Organic3 from '../../../../assets/images/Organic3.jpg'
-import Organic4 from '../../../../assets/images/Organic4.jpg'
-import Organic5 from '../../../../assets/images/Organic5.jpg'
-
+import Organic1 from '../../../../assets/images/Organic1.jpg';
+import Organic2 from '../../../../assets/images/Organic2.jpg';
+import Organic3 from '../../../../assets/images/Organic3.jpg';
+import Organic4 from '../../../../assets/images/Organic4.jpg';
+import Organic5 from '../../../../assets/images/Organic5.jpg';
 
 const OrganicFarming = () => {
   const carouselSettings = {
-    dots: true, // Show navigation dots
-    infinite: true, // Loop through slides
-    speed: 500, // Transition speed in milliseconds
-    slidesToShow: 1, // Show one slide at a time
-    slidesToScroll: 1, // Scroll one slide at a time
-    autoplay: true, // Enable auto-play
-    autoplaySpeed: 3000, // Time in milliseconds between slides
-    arrows: true, // Enable navigation arrows
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
   };
+
   return (
     <div className="organic-farming-container">
       <h1 className="organic-farming-heading">Organic Farming: Nurturing Nature</h1>
@@ -43,55 +43,49 @@ const OrganicFarming = () => {
           rich in vitamins, minerals, and antioxidants. Organic mushroom farming focuses on using natural substrates
           and avoiding synthetic chemicals, ensuring high-quality and chemical-free produce.
         </p>
-      </section>
 
-      <section className="vegetable-section">
         <h3>Sugarcane</h3>
         <p>
           Sugarcane is a tropical plant known for its sweet juice, which is processed to produce sugar. Organic
           sugarcane farming involves using natural pest control methods and organic fertilizers to promote healthy
           growth and yield. This approach ensures a sustainable and environmentally friendly sugar production process.
         </p>
-      </section>
 
-      <section className="vegetable-section">
         <h3>Peanuts</h3>
         <p>
           Peanuts, or groundnuts, are a protein-rich legume commonly used in various culinary applications. Organic
           peanut farming emphasizes the use of organic compost and natural pest management techniques to grow high-
           quality peanuts without synthetic chemicals. This method improves soil health and produces nutritious nuts.
         </p>
-      </section>
 
-      <section className="vegetable-section">
         <h3>Corn</h3>
         <p>
           Corn, also known as maize, is a staple crop used in a wide range of foods and products. Organic corn
           farming practices include crop rotation and organic pest control methods to maintain soil fertility and
-          minimize environmental impact. Organic corn production supports sustainable agriculture and produces healthy
-          and chemical-free corn.
+          minimize environmental impact. Organic corn production supports sustainable agriculture and produces healthy,
+          chemical-free corn.
         </p>
       </section>
 
       <div className="carousel-section">
-          <Slider {...carouselSettings}>
-            <div>
-              <img src={Organic1} alt="Slide 1" className="carousel-image" />
-            </div>
-            <div>
-              <img src={Organic2} alt="Slide 2" className="carousel-image" />
-            </div>
-            <div>
-              <img src={Organic3} alt="Slide 3" className="carousel-image" />
-            </div>
-            <div>
-              <img src={Organic4} alt="Slide 4" className="carousel-image" />
-            </div>
-            <div>
-              <img src={Organic5} alt="Slide 5" className="carousel-image" />
-            </div>
-          </Slider>
-        </div>
+        <Slider {...carouselSettings}>
+          <div>
+            <img src={Organic1} alt="Organic farming process - Slide 1" className="carousel-image" />
+          </div>
+          <div>
+            <img src={Organic2} alt="Organic crops growing - Slide 2" className="carousel-image" />
+          </div>
+          <div>
+            <img src={Organic3} alt="Harvesting organic vegetables - Slide 3" className="carousel-image" />
+          </div>
+          <div>
+            <img src={Organic4} alt="Sustainable organic farming - Slide 4" className="carousel-image" />
+          </div>
+          <div>
+            <img src={Organic5} alt="Fresh organic produce - Slide 5" className="carousel-image" />
+          </div>
+        </Slider>
+      </div>
 
       <section className="vegetable-section">
         <h3>Carrots</h3>
@@ -99,27 +93,21 @@ const OrganicFarming = () => {
           Carrots are a root vegetable rich in beta-carotene, fiber, and vitamins. Organic carrot farming focuses on
           natural soil enrichment techniques and organic pest management to ensure high-quality, nutritious carrots.
         </p>
-      </section>
 
-      <section className="vegetable-section">
         <h3>Tomatoes</h3>
         <p>
           Tomatoes are a popular fruit used in many dishes. Organic tomato farming involves using compost and natural
           pest control methods to grow flavorful and healthy tomatoes. This approach reduces reliance on synthetic
           chemicals and supports sustainable agriculture.
         </p>
-      </section>
 
-      <section className="vegetable-section">
         <h3>Leafy Greens</h3>
         <p>
           Leafy greens, such as spinach and lettuce, are rich in vitamins and minerals. Organic farming practices for
           leafy greens include using organic fertilizers and natural pest control to produce fresh and nutritious
           greens without harmful chemicals.
         </p>
-      </section>
 
-      <section className="vegetable-section">
         <h3>Beets</h3>
         <p>
           Beets are a root vegetable known for their vibrant color and health benefits. Organic beet farming involves

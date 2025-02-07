@@ -10,7 +10,7 @@ import Stories from './components/Stories/Stories.js';
 import News_Events from './components/NewsEEvents/News_Events.js';
 import GetInvolved from './components/GetInvolved/GetInvolved.js';
 import ContactUs from './components/ContactUs/ContactUs.js';
-import DonateUs from './components/DonateUs/Donate.js';
+// import DonateUs from './components/DonateUs/Donate.js';
 
 
 
@@ -34,8 +34,13 @@ import Basketball from './components/Programs/Pages/SportsComplex/BasketBall/bas
 import Kabaddi from './components/Programs/Pages/SportsComplex/Kabbadi/kabbadi.js';
 import Kushti from './components/Programs/Pages/SportsComplex/Kushti/kushti.js';
 import Volleyball from './components/Programs/Pages/SportsComplex/VolleyBall/volleyball.js';
+import Gallery from './components/Gallery/Gallery.js';
 
 
+
+//Gallery
+
+import Auditorium from './components/Gallery/Auditorium/Auditorium.js';
 
 
 
@@ -61,7 +66,7 @@ function App() {
           <Route path='/news_events' element={<News_Events />} />
           <Route path='/getinvolved' element={<GetInvolved />} />
           <Route path='/contactus' element={<ContactUs />} />
-          <Route path='/donateus' element={<DonateUs />} />
+          <Route path='/donateus' element={<Gallery/>} />
 
 
 
@@ -88,6 +93,12 @@ function App() {
         <Route path="/components/Programs/Pages/SportsComplex/Kabbadi/kabbadi.js" element={<Kabaddi />} />
         <Route path="/components/Programs/Pages/SportsComplex/Kushti/kushti.js" element={<Kushti />} />
         <Route path="/components/Programs/Pages/SportsComplex/VolleyBall/volleyball.js" element={<Volleyball />} />
+
+
+
+
+
+        <Route path="/components/Gallery/Auditorium" element={<Auditorium />} />
 
 
 

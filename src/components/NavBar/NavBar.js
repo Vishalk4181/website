@@ -40,7 +40,7 @@ const NavBar = () => {
                     <li><Link to="/news_events" onClick={toggleMenu}>News & Events</Link></li>
                     <li><Link to="/getinvolved" onClick={toggleMenu}>Get Involved</Link></li>
                     <li><Link to="/contactus" onClick={toggleMenu}>Contact Us</Link></li>
-                    {/* <li><Link to="/donateus" onClick={toggleMenu}>Donate Us</Link></li> */}
+                    <li><Link to="/donateus" onClick={toggleMenu}>Donate Us</Link></li>
                 </ul>
             </nav>
         </header>
