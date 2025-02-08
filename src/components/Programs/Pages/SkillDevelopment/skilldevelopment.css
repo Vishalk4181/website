@@ -151,6 +151,21 @@ button[type="submit"]:hover {
   background: #fe851c;
 }
 
+.carousel-section {
+  max-width: 800px;
+  margin: 30px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
 /* Responsive Design */
 
 /* For large desktops and monitors */

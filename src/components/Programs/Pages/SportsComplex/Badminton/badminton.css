@@ -92,14 +92,19 @@
     color: #333;
 }
 
-.carousel-container {
+.carousel-section {
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .carousel-image {
     width: 100%;
-    height: auto; /* Adjusts the carousel height based on content */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px; /* Prevents carousel overflow */
-}
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
 
 /* Animations */
 @keyframes fadeIn {

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 const galleryItems = [
-    { id: "auditorium", title: "Auditorium", image: "images/auditorium.jpg", path: '/components/Gallery/Auditorium' },
+    { id: "Auditorium", title: "Auditorium", image: "images/auditorium.jpg", path: '/components/Gallery/Auditorium' },
     { id: "basketball", title: "Basketball Court", image: "images/basketball.jpg" },
     { id: "bhojnalya", title: "Bhojnalya", image: "images/bhojnalya.jpg" },
     { id: "buildings", title: "Buildings", image: "images/buildings.jpg" },
