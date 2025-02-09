@@ -45,6 +45,12 @@ const programsData = [
     icon: '🐄',
     path: '/components/Programs/Pages/Gaushala/gausahala.js'
   },
+  {
+    title: 'Library',
+    description: 'The library offers a serene environment with a vast collection of books, digital resources, and study spaces for learning and research.',
+    icon:'📖',
+    path: '/component/Programs/Pages/Library/Library.js'
+  },
 ];
 
 const Programs = () => {

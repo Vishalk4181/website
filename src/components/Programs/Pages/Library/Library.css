@@ -1,0 +1,255 @@
+/* Carousel */
+.carousel-section {
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* General Styles */
+  .library-page {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #f3e5ab, #e3f2fd);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 3.2rem;
+    color: #d32f2f; /* Deep red */
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 0 0 25px rgba(211, 47, 47, 0.5);
+    letter-spacing: 2px;
+    position: relative;
+    animation: fadeIn 1s ease-out, bounceIn 1s ease-in-out;
+  }
+  
+  .title::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 8px;
+    background: linear-gradient(45deg, #b71c1c, #64b5f6);
+    margin: 20px auto 0;
+    border-radius: 5px;
+    background-size: 200% 200%;
+    animation: gradientMove 4s linear infinite;
+  }
+  
+  /* Subtitle */
+  .subtitle {
+    font-size: 1.2em;
+    color: #000000;
+    margin-top: 10px;
+    font-style: italic;
+    text-align: center;
+    display: block;
+  }
+  
+  /* Sections */
+  .intro-section, .facilities-section, .benefits-section, .rules-section, .membership-section, .get-involved-section {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out, slideUp 1s ease-in-out;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #d32f2f; /* Deep red */
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Benefits List */
+  .benefits-list {
+    list-style-type: disc;
+    margin-left: 40px;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .benefits-list li {
+    margin-bottom: 10px;
+  }
+  
+  /* Rules List */
+  .rules-list {
+    list-style-type: decimal;
+    margin-left: 40px;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .rules-list li {
+    margin-bottom: 10px;
+  }
+  
+  /* Membership Steps */
+  .membership-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .step {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .step h3 {
+    color: #d32f2f;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .step p {
+    color: #555;
+    font-size: 1.1rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+  .library-page {
+    padding: 40px 15px;
+  }
+  
+  .title {
+    font-size: 2.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1em;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  .intro-section, .facilities-section, .benefits-section, .rules-section, .membership-section, .get-involved-section {
+    padding: 25px;
+  }
+  
+  .membership-steps {
+    gap: 15px;
+  }
+  }
+  
+  @media (max-width: 768px) {
+  .library-page {
+    padding: 30px 10px;
+  }
+  
+  .title {
+    font-size: 2.4rem;
+  }
+  
+  .subtitle {
+    font-size: 1em;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .intro-section, .facilities-section, .benefits-section, .rules-section, .membership-section, .get-involved-section {
+    padding: 20px;
+  }
+  
+  .membership-steps {
+    gap: 10px;
+  }
+  }
+  
+  @media (max-width: 480px) {
+  .library-page {
+    padding: 20px 5px;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9em;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  .intro-section, .facilities-section, .benefits-section, .rules-section, .membership-section, .get-involved-section {
+    padding: 15px;
+  }
+  
+  .membership-steps {
+    gap: 8px;
+  }
+  }  

@@ -23,6 +23,7 @@ import SportsComplex from './components/Programs/Pages/SportsComplex/sportscompl
 import OrganicFarming from './components/Programs/Pages/OrganicFarming/organicfarming.js';
 import TissueCulture from './components/Programs/Pages/TissueCulture/tissueculture.js';
 import Gaushala from './components/Programs/Pages/Gaushala/gaushala.js';
+import Library from './components/Programs/Pages/Library/Library.js';
 
 
 
@@ -41,6 +42,9 @@ import Gallery from './components/Gallery/Gallery.js';
 //Gallery
 
 import Auditorium from './components/Gallery/Auditorium/Auditorium.js';
+import BasketballCourt from './components/Gallery/Basketball Court/BasketballCourt.js';
+import Bhojnalya from './components/Gallery/Bhojnalya/Bhojnalya.js';
+import CinemaSports from './components/Gallery/Cinema&Sports Hall/CinemaSports.js';
 
 
 
@@ -80,7 +84,8 @@ function App() {
         <Route path="/components/Programs/pages/SportsComplex/sportscomplex.js" element={<SportsComplex />} />
         <Route path="/components/Programs/Pages/OrganicFarming/organicfarming.js" element={<OrganicFarming />} />
         <Route path="/components/Programs/Pages/TissueCulture/tissueculture.js" element={<TissueCulture />} />
-        <Route path="/components/Programs/Pages/Gaushala/gausahala.js" element={<Gaushala />} />"
+        <Route path="/components/Programs/Pages/Gaushala/gausahala.js" element={<Gaushala />} />
+        <Route path="/components/Programs/Pages/Library/Library.js" element={<Library />} />
 
 
 
@@ -99,6 +104,9 @@ function App() {
 
 
         <Route path="/components/Gallery/Auditorium" element={<Auditorium />} />
+        <Route path="/components/Gallery/Basketball Court" element={<BasketballCourt/>} />
+        <Route path="/components/Gallery/Bhojnalya" element={<Bhojnalya/>} />
+        <Route path="/components/Gallery/Cinema&Sports Hall" element={<CinemaSports/>} />
 
 
 

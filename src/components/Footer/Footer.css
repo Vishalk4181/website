@@ -110,7 +110,7 @@
 }
 
 /* Footer Bottom */
-.footer .footer-bottom {
+.footer{
     font-size: clamp(0.7em, 1.5vw, 0.9em);
     border-top: 1px solid #7f8c8d;
     padding-top: 5px;
@@ -119,6 +119,24 @@
     text-align: center;
     animation: fadeIn 2s ease-in-out;
 }
+
+/* Footer Bottom */
+.footer .footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.7em, 1.5vw, 0.9em);
+    border-top: 1px solid #7f8c8d;
+    padding-top: 5px;
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+
+
 
 /* Keyframes for Animations */
 @keyframes fadeIn {
