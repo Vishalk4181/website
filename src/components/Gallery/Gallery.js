@@ -39,7 +39,7 @@ const Gallery = () => {
 
             <div className="gallery-grid">
                 {galleryItems.map((item) => (
-                    <Link to={`/gallery/${item.id}`} key={item.id} className="gallery-card">
+                    <Link to={`/components/Gallery/${item.id}`} key={item.id} className="gallery-card">
                         <img src={item.image} alt={item.title} className="gallery-thumbnail" />
                         <h3>{item.title}</h3>
                     </Link>

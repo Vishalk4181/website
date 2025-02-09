@@ -7,34 +7,41 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Background Styling */
-.plants-container {
+/* Background Gradient */
+.cinemasports-container {
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(to right, #e0f7fa, #c8e6c9);
+    background: linear-gradient(135deg, #2c3e50, #8e44ad); /* Dark blue to purple */
     min-height: 100vh;
-    color: #2c3e50;
+    color: white;
 }
 
-/* Heading */
-.plants-container h1 {
+/* Heading Styling */
+.cinemasports-container h1 {
     font-size: 3rem;
     margin-bottom: 20px;
     text-transform: uppercase;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Description */
-.plants-description {
+/* Description Card */
+.cinemasports-description {
     max-width: 800px;
     margin: 0 auto 30px auto;
     font-size: 1.2rem;
     line-height: 1.8;
-    background: rgba(255, 255, 255, 0.8);
-    color: #2c3e50;
+    background: rgba(255, 204, 102, 0.9); /* Light golden-yellow */
+    color: #2c3e50; /* Dark text for contrast */
+    backdrop-filter: blur(5px);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cinemasports-description:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Gallery Grid */
@@ -46,10 +53,9 @@
     margin-top: 30px;
 }
 
-/* Gallery Items */
+/* Gallery Items (Image & Video Cards) */
 .gallery-item {
-    width: 100%;
-    max-width: 250px;
+    width: 250px;
     height: 180px;
     object-fit: cover;
     border-radius: 15px;
@@ -63,7 +69,7 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Lightbox */
+/* Lightbox (Fullscreen View) */
 .lightbox {
     position: fixed;
     top: 0;
@@ -84,6 +90,32 @@
     border-radius: 10px;
 }
 
+/* Navigation Buttons */
+.lightbox-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.lightbox-btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
 /* Close Button */
 .close-btn {
     position: absolute;
@@ -92,7 +124,7 @@
     font-size: 2rem;
     cursor: pointer;
     color: white;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
 .close-btn:hover {
@@ -106,35 +138,11 @@
     }
 
     .gallery-item {
-        max-width: 200px;
+        width: 200px;
         height: 150px;
     }
 
-    .lightbox-media {
-        max-width: 95%;
-        max-height: 85%;
-    }
-}
-
-@media (max-width: 480px) {
-    .plants-container {
-        padding: 30px 10px;
-    }
-
-    .plants-description {
-        font-size: 14px;
-    }
-
-    .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-
-    .gallery-item {
-        max-width: 150px;
-        height: 120px;
-    }
-
-    .close-btn {
+    .lightbox-btn {
         font-size: 1.5rem;
     }
 }

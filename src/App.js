@@ -45,6 +45,24 @@ import Auditorium from './components/Gallery/Auditorium/Auditorium.js';
 import BasketballCourt from './components/Gallery/Basketball Court/BasketballCourt.js';
 import Bhojnalya from './components/Gallery/Bhojnalya/Bhojnalya.js';
 import CinemaSports from './components/Gallery/Cinema&Sports Hall/CinemaSports.js';
+import Dormitory from './components/Gallery/Dormitory/Dormitory.js';
+import Exercise from './components/Gallery/Exercise/Exercise.js';
+import Farming from './components/Gallery/Farming/Farming.js';
+import Gaushalaa from './components/Gallery/Gaushala/Gaushala.js';
+import Generator from './components/Gallery/Generator Set/Generator.js';
+import Hospital from './components/Gallery/Hospital/Hospital.js';
+import Libraryy from './components/Gallery/Library/Library.js';
+import Living from './components/Gallery/Living Rooms/Living.js';
+import Mhall from './components/Gallery/Meeting Hall/Mhall.js';
+import Plants from './components/Gallery/Medicinal Plants/Plants.js';
+import MLrooms from './components/Gallery/Meeting+Living Rooms/MLrooms.js';
+import Offices from './components/Gallery/Offices/Offices.js';
+import Polyhouses from './components/Gallery/PolyHouses/Polyhouses.js';
+import Quotes from './components/Gallery/Quotes/Quotes.js';
+import RunningGrounds from './components/Gallery/Running Track+Ground/Running_Grounds.js';
+import TennisNets from './components/Gallery/Tennis Nets/TennisNets.js';
+import TissueLabs from './components/Gallery/Tissue Culture Labs/Tissuelabs.js';
+
 
 
 
@@ -104,9 +122,27 @@ function App() {
 
 
         <Route path="/components/Gallery/Auditorium" element={<Auditorium />} />
-        <Route path="/components/Gallery/Basketball Court" element={<BasketballCourt/>} />
+        <Route path="/components/Gallery/Basketball" element={<BasketballCourt/>} />
         <Route path="/components/Gallery/Bhojnalya" element={<Bhojnalya/>} />
-        <Route path="/components/Gallery/Cinema&Sports Hall" element={<CinemaSports/>} />
+        <Route path="/components/Gallery/Cinema&Sports" element={<CinemaSports/>} />
+        <Route path="/components/Gallery/dormitory" element={<Dormitory/>} />
+        <Route path="/components/Gallery/exercise" element={<Exercise/>} />
+        <Route path="/components/Gallery/farming" element={<Farming/>} />
+        <Route path="/components/Gallery/gaushala" element={<Gaushalaa/>} />
+        <Route path="/components/Gallery/generator" element={<Generator/>} />
+        <Route path="/components/Gallery/hospital" element={<Hospital/>} />
+        <Route path="/components/Gallery/library" element={<Libraryy/>} />
+        <Route path="/components/Gallery/livingroom" element={<Living/>} />
+        <Route path="/components/Gallery/meetinghall" element={<Mhall/>} />
+        <Route path="/components/Gallery/medicalplant" element={<Plants/>} />
+        <Route path="/components/Gallery/mlrooms" element={<MLrooms/>} />
+        <Route path="/components/Gallery/offices" element={<Offices/>} />
+        <Route path="/components/Gallery/polyhouses" element={<Polyhouses/>} />
+        <Route path="/components/Gallery/running&ground" element={<RunningGrounds/>} />
+        <Route path="/components/Gallery/tennisnets" element={<TennisNets/>} />
+        <Route path="/components/Gallery/tissueculturelabs" element={<TissueLabs/>} />
+        <Route path="/components/Gallery/quotes" element={<Quotes/>} />
+
 
 
 

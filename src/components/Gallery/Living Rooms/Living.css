@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Styling */
+.living-container {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #e3f2fd, #f3e5ab);
+    min-height: 100vh;
+    color: #2c3e50;
+}
+
+/* Heading */
+.living-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Description */
+.living-description {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    background: rgba(255, 255, 255, 0.8);
+    color: #2c3e50;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+/* Gallery Items */
+.gallery-item {
+    width: 100%;
+    max-width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Lightbox Media */
+.lightbox-media {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .gallery-item {
+        max-width: 200px;
+        height: 150px;
+    }
+
+    .lightbox-media {
+        max-width: 95%;
+        max-height: 85%;
+    }
+}
+
+@media (max-width: 480px) {
+    .living-container {
+        padding: 30px 10px;
+    }
+
+    .living-description {
+        font-size: 14px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .gallery-item {
+        max-width: 150px;
+        height: 120px;
+    }
+
+    .close-btn {
+        font-size: 1.5rem;
+    }
+}
