@@ -60,7 +60,10 @@
   color: #000000;
   margin-top: 10px;
   font-style: italic;
+  text-align: center; /* Centers the text */
+  display: block; /* Ensures it takes full width if necessary */
 }
+
 
 /* Sections */
 .intro-section, .benefits-section, .impact-section, .process-section, .get-involved-section {
@@ -116,6 +119,34 @@ h2 {
   color: #555;
   font-size: 1.1rem;
 }
+
+.about-gaushala {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 40px auto; /* Centers the section horizontally */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out, slideUp 1s ease-in-out;
+  max-width: 80%; /* Keeps it responsive */
+  text-align: center; /* Centers text inside */
+}
+
+.about-gaushala h2 {
+  font-size: 2rem;
+  color: #f57f17; /* Saffron color to match headings */
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.about-gaushala p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+  font-weight: 500;
+}
+
 
 /* Animations */
 @keyframes fadeIn {
@@ -263,4 +294,35 @@ h2 {
 .step {
   padding: 8px;
 }
+}
+
+
+@media (max-width: 768px) {
+  .about-gaushala {
+    max-width: 90%;
+    padding: 25px;
+  }
+
+  .about-gaushala h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-gaushala p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-gaushala {
+    max-width: 95%;
+    padding: 20px;
+  }
+
+  .about-gaushala h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-gaushala p {
+    font-size: 1rem;
+  }
 }

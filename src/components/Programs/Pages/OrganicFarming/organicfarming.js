@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import './organicfarming.css';
 import Slider from 'react-slick';
 
@@ -34,12 +34,29 @@ const OrganicFarming = () => {
         </p>
       </section>
 
+      <section className="modern-farming-section">
+        <h2>जैविक एवं जीरो बजट खेती</h2>
+        <p>
+          • 2000 sq mtr के 2 पॉली हाउस (4000 sq mtr)<br/>
+          • 2000 sq mtr के 2 नेट हाउस<br/>
+          • 3 एकड़ में ड्रिप सिंचाई प्रणाली<br/>
+        </p>
+        <p>
+          जिसमें शिमला मिर्च, टमाटर, खीरा और लिली फूल, ओपन में ब्रोकली, गोभी, मटर, खरबूजा और तरबूज की खेती की जाती है।
+        </p>
+        <p>
+          उद्देश्य: आसपास के गांव के लोगों को आधुनिक खेती के बारे में जानकारी देना तथा युवा वर्ग को समझाना कि खेती अनपढ़ लोगों का कार्य नहीं है। यह पढ़े-लिखे लोगों का कार्य है, और जो कमाई बाहर जाकर नौकरी में कमाते हैं, वह हम अपने खेत में अपने परिवार के साथ रहकर कमा सकते हैं। साथ ही, हम 10 लोगों को रोजगार भी प्रदान कर सकते हैं।
+        </p>
+      </section>
+
       <h2 className="what-we-farm-heading">What We Farm</h2>
 
       <section className="vegetable-section">
         <h3>Mushrooms</h3>
         <p>
-          Mushrooms are a highly nutritious and versatile crop that can be grown in various environments. They are
+        हमारे यहां पर 3 एकड़ में मशरूम प्लांट लगा हुआ है जिसमें उत्पादन, बीज और खाद तीनों चीज बनाई जाती है। उत्पादन रू हमारे यहां पर आठ कमरे हैं जिसमें हमारे कमरे हाई टेक्नोलॉजी से जुड़े हुए हैं। जिसके कारण हमारा उत्पादन अच्छा हो रहा है साथ ही साथ इसकी गुणवता भी बड़ी है।</p>
+        <p>खाद रू हमारे यहां पर कंपोस्ट खाद भी बनाई जाती है जिससे हमारी उत्पादन क्षमता में वृद्धि हुई है साथ ही साथ गुणवता भी अधिक बेहतर हुई है </p>
+          <p>Mushrooms are a highly nutritious and versatile crop that can be grown in various environments. They are
           rich in vitamins, minerals, and antioxidants. Organic mushroom farming focuses on using natural substrates
           and avoiding synthetic chemicals, ensuring high-quality and chemical-free produce.
         </p>
@@ -65,6 +82,63 @@ const OrganicFarming = () => {
           minimize environmental impact. Organic corn production supports sustainable agriculture and produces healthy,
           chemical-free corn.
         </p>
+
+        <h3>Capsicum</h3>
+        <p>
+          Capsicum, also known as bell pepper, is a colorful and nutrient-rich vegetable. Organic capsicum farming
+          involves natural fertilizers and eco-friendly pest management techniques to produce high-quality, chemical-free
+          peppers that are rich in vitamins A and C.
+        </p>
+
+        <h3>Tomato</h3>
+        <p>
+          Tomatoes are a widely used vegetable known for their juicy texture and tangy flavor. Organic tomato farming
+          utilizes compost, crop rotation, and natural pest deterrents to grow nutritious and pesticide-free tomatoes,
+          preserving soil health and enhancing yield quality.
+        </p>
+
+        <h3>Cucumber</h3>
+        <p>
+          Cucumbers are refreshing and hydrating vegetables commonly used in salads. Organic cucumber farming
+          promotes the use of natural compost and organic pest control, ensuring chemical-free and crisp cucumbers
+          packed with essential nutrients.
+        </p>
+
+        <h3>Lily Flower</h3>
+        <p>
+          Lily flowers are cultivated for their beauty and medicinal properties. Organic lily flower farming
+          emphasizes natural fertilizers and pest control methods, resulting in vibrant blooms free from harmful chemicals.
+        </p>
+
+        <h3>Broccoli</h3>
+        <p>
+          Broccoli is a nutrient-dense vegetable known for its health benefits. Organic broccoli farming incorporates
+          crop rotation and biological pest control to maintain soil fertility and produce fresh, chemical-free broccoli.
+        </p>
+
+        <h3>Cauliflower</h3>
+        <p>
+          Cauliflower is a versatile vegetable rich in fiber and vitamins. Organic cauliflower farming relies on
+          compost, natural fertilizers, and eco-friendly pest management to grow healthy, pesticide-free cauliflower.
+        </p>
+
+        <h3>Peas</h3>
+        <p>
+          Peas are a protein-rich legume commonly used in various dishes. Organic pea farming involves sustainable
+          agricultural practices such as crop rotation and organic compost, ensuring chemical-free and nutritious peas.
+        </p>
+
+        <h3>Muskmelon</h3>
+        <p>
+          Muskmelon is a sweet and juicy fruit known for its refreshing taste. Organic muskmelon farming utilizes
+          natural compost and organic pest control techniques to grow flavorful and pesticide-free melons.
+        </p>
+
+        <h3>Watermelon</h3>
+        <p>
+          Watermelon is a hydrating summer fruit packed with vitamins and antioxidants. Organic watermelon farming
+          focuses on sustainable soil management and natural fertilizers to produce fresh, chemical-free watermelons.
+        </p>
       </section>
 
       <div className="carousel-section">
@@ -86,35 +160,6 @@ const OrganicFarming = () => {
           </div>
         </Slider>
       </div>
-
-      <section className="vegetable-section">
-        <h3>Carrots</h3>
-        <p>
-          Carrots are a root vegetable rich in beta-carotene, fiber, and vitamins. Organic carrot farming focuses on
-          natural soil enrichment techniques and organic pest management to ensure high-quality, nutritious carrots.
-        </p>
-
-        <h3>Tomatoes</h3>
-        <p>
-          Tomatoes are a popular fruit used in many dishes. Organic tomato farming involves using compost and natural
-          pest control methods to grow flavorful and healthy tomatoes. This approach reduces reliance on synthetic
-          chemicals and supports sustainable agriculture.
-        </p>
-
-        <h3>Leafy Greens</h3>
-        <p>
-          Leafy greens, such as spinach and lettuce, are rich in vitamins and minerals. Organic farming practices for
-          leafy greens include using organic fertilizers and natural pest control to produce fresh and nutritious
-          greens without harmful chemicals.
-        </p>
-
-        <h3>Beets</h3>
-        <p>
-          Beets are a root vegetable known for their vibrant color and health benefits. Organic beet farming involves
-          maintaining soil health with organic compost and using natural methods to manage pests, ensuring high-quality
-          and chemical-free beets.
-        </p>
-      </section>
     </div>
   );
 };

@@ -55,6 +55,44 @@
   color: #333;
 }
 
+.sports-info {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 40px 0;
+  text-align: center;
+}
+
+.sports-description {
+  font-size: 1.4rem;
+  color: #333;
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.sports-facilities {
+  text-align: left;
+  list-style-type: disc;
+  padding-left: 20px; /* Ensures proper indentation */
+  margin-top: 10px;
+}
+
+.sports-facilities li {
+  font-size: 1.2rem;
+  color: #444;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sports-facilities li:last-child {
+  border-bottom: none;
+}
+
+
+
+
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -170,5 +208,35 @@
 
   .sports-complex {
       padding: 20px 5px; /* Minimum padding */
+  }
+}
+
+@media (max-width: 768px) {
+  .sports-info {
+    padding: 20px;
+  }
+
+  .sports-description {
+    font-size: 1.2rem;
+  }
+
+  .sports-facilities li {
+    font-size: 1.1rem;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sports-info {
+    padding: 15px;
+  }
+
+  .sports-description {
+    font-size: 1rem;
+  }
+
+  .sports-facilities li {
+    font-size: 1rem;
+    padding: 6px 0;
   }
 }
