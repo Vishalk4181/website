@@ -136,6 +136,75 @@ html, body {
   text-transform: uppercase;
 }
 
+.sub-heading {
+  font-size: 2.5rem;
+  color: #f57f17;
+  margin-top: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.project-points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.project-points ul {
+  list-style-type: none;
+  padding: 0;
+  width: 48%;
+}
+
+.project-points li {
+  font-size: 1.1rem;
+  padding: 8px 0;
+  color: #333;
+}
+
+.project-points-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.project-points-column {
+  width: 48%;
+}
+
+.project-points-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.project-points-column li {
+  font-size: 1.1rem;
+  padding: 10px 0;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.project-points-column li::before {
+  content: "•"; /* Bullet point */
+  color: saffron;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.project-points-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(to right, #e3f2fd, #f3e5ab);
+}
+
+
+
+
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -251,5 +320,25 @@ html, body {
 
   .carousel-container {
     height: 25vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-points {
+    flex-direction: column;
+  }
+
+  .project-points ul {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-points-container {
+    flex-direction: column;
+  }
+
+  .project-points-column {
+    width: 100%;
   }
 }
